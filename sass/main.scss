@@ -1,0 +1,522 @@
+@import "compass/reset";
+@import url(http://fonts.googleapis.com/css?family=Lato:400,300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
+@import "cross_browser_opacity.scss";
+
+
+$small_width: 620px;
+$back_colour: #FFE0D7;
+$font_size: 14px;
+$page_width: 80em;
+$border: none;
+$centered: 0 auto;
+$lato: 'Lato', sans-serif;
+$min_width: 20em;
+$cube: url("../images/cubes.png") repeat fixed 60% 0 transparent;
+$nav_color: #607890;
+$sans: 'Open Sans', sans-serif;
+$oswald: 'Oswald', sans-serif;
+$purple: #C5C4F8;
+$salmon: #FABFBA;
+$babyblue: #D8F6FF;
+$palepink: #F0E0E2;
+$green: #81FFAF;;
+$cream: #FFF6F1;
+$pink: #FAC0FF;
+$circle: 13.714em;
+
+/*header{
+
+    background-color: black;
+    height: 2em;
+    margin-top:-.1em;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}*/
+
+.clearfloat
+{
+	float:none;
+	clear:both;
+}
+
+
+body {
+	background: $back_colour;
+	max-width: $page_width;
+	border: $border;
+	margin: $centered;
+	font-family: $lato;
+/*	min-width:$min_width;*/
+  font-size:16px;
+  @media screen and (max-width: $small_width), only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+        width:100%;
+        margin:$centered; }
+
+#footer #ul {
+  list-style: none;
+  display:inline;
+}
+#test{
+  width:100%;
+  height:auto;
+}
+	background: $cube;
+	#container{ 
+	max-width:$page_width;
+	/*min-width:$min_width;*/
+margin:$centered;
+margin-top:.5em;
+min-height:50em;
+@media screen and (max-width: $small_width), only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+  max-width:100%;
+  margin:$centered;
+}
+}
+	nav {
+	max-width: 20em;
+	border: $border;
+	float:right;
+	display:block;
+ @media screen and (max-width: $small_width), only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+
+     float:none;
+     margin-bottom:1em;
+    }
+		a {
+		text-decoration:none;
+		color: $nav_color;
+		padding: 0 1em;
+		font-size:2em;
+		font-weight: 300;
+		}
+
+	
+}
+}
+
+#home
+{
+  margin:$centered;
+margin-top:.5em;
+}
+#location
+{
+  
+margin-left:-1em;
+ @media screen and (max-width: 854px + 14px) {
+margin-left:-2em;
+     } 
+}
+#intro {
+  width:16em;
+	border:$border;
+	margin-left:2em;
+	float:left;
+	margin-top:.5em;
+	/*font-family:$lato;*/
+	font-size:3em;
+	font-weight:300;
+	font-family: $sans;
+	letter-spacing:-3px;
+   @media screen and (max-width: 1215px) {
+ width:auto;
+ font-size:2.8em;
+     }
+   @media screen and (max-width: 1095px) {
+
+  width:auto;
+  font-size:270%;
+     }
+     @media screen and (max-width: 1024px) {
+width:auto;
+font-size:2.5em;
+     }
+       @media screen and (max-width: 925px + 20px) {
+width:auto;
+font-size:2.3em;
+     }
+     @media screen and (max-width: 838px + 64px) {
+width:60%;
+font-size:2.2em;
+     } 
+      @media screen and (max-width: 854px + 14px) {
+width:100%;
+font-size:2em;
+     } 
+        @media screen and (max-width: 854px + 14px) {
+          width:auto;
+
+
+     } 
+/*     @media screen and (max-width: 1004px) {
+  font-size:2.6em;
+     } 
+  /* @media screen and (max-width: 1090px) {
+  font-size:2.8em;
+     } 
+     @media screen and (max-width: 1004px) {
+  font-size:2.6em;
+     } */
+     @media screen and (max-width: $small_width), only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+      display:none;
+    }
+
+	h1::first-letter {
+	font-weight:300;
+	/*font-size:1.6em;*/
+	margin-left:-.8em;
+	
+   @media screen and (max-width: 854px + 14px) {
+width:auto;
+letter-spacing:-1px;
+
+     } }
+
+  #name {
+  font-size:1.4em;
+  padding:.1em;
+  vertical-align:baseline;
+  }
+
+
+}
+
+
+#about {
+background: url("../images/ESCHERESQUE_STE.png") repeat fixed 100% 0 transparent;;
+width:124%;
+margin-left:-10em;
+margin:none;
+ min-height: 1000px; 
+}
+
+footer{
+	border:$border;
+	max-width:100%;
+	margin:$centered;
+	height:5em;
+//	background:rgba(000, 000, 255, 0.1);
+@media screen and (max-width: $small_width), only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+  width:auto;
+}
+}
+
+#selection {
+
+	border:$border;
+  height:100%;
+	margin-top:.2em;
+  @media screen and (max-width: $small_width),only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+font-size: 20px;
+width:100%; }
+	
+	a {
+	color:black;
+	font-weight:500;
+	font-family: $oswald;
+	font-variant:small-caps;
+	letter-spacing:.1em;
+	}
+   	.cube {
+   	position: relative;
+   	min-height:3em;
+   	padding-top:2em;
+    text-align: center;
+   width: 16.64%; /*13.3em*/
+    background: $green;
+    float:left;
+    text-align:center;
+    @media screen and (max-width: 1054px) {
+     width:20%;
+     } 
+     @media screen and (max-width: $small_width),only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+font-size: 20px;
+width:100%; }
+   	
+   	}
+
+   	.empty {
+   	@extend .cube;
+   	background:none;
+   	height:10.857em;
+   	display:block;
+   	vertical-align:baseline;
+   	}
+
+   	.cubepink {
+   	@extend .cube;
+   	background:$pink;
+   	}
+
+
+   	.cubeblue {
+   	@extend .cube;
+   	background:$babyblue;
+    @media screen and (max-width: 1054px) {
+     width:10%;
+     } 
+    @media only screen and (max-width: $small_width), only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+     display:none;
+    }
+   	}
+
+   	.cubecream {
+   	@extend .cube;
+   	background:$cream;
+     @media screen and (max-width: 1054px) {
+     width:10%;
+     }    
+      @media screen and (max-width: $small_width) {
+     display:none;
+     }
+   	}
+
+   	.cubepalepink {
+   	@extend .cube;
+   	background:$palepink;
+   	}
+
+   	.cubesalmon {
+   	@extend .cube;
+   	background:$salmon;
+   	}
+   	.cubepurple {
+   	@extend .cube;
+   	background:$purple;
+   	}
+
+}
+
+@mixin page_tab($color: none){
+  max-width:$page_width - 4.5em;
+  min-height:20em;
+  border:$border;
+  @include opacity(60);
+  @if $color != none {
+  background: lighten($color, 0%);
+  padding:2em;
+
+ @media screen and (max-width: $small_width){
+     display:none;
+    }
+  }
+  
+}
+
+@each $tab_color in green, cream, pink, palepink, purple, blue {
+$colourr:none;
+  ##{$tab_color} {
+  @if($tab_color == green){
+  $colourr: $green;
+  }
+  @if($tab_color == cream){
+  $colourr: $cream;
+  }
+  @if($tab_color == pink)
+  {
+  $colourr: $pink;
+  }
+   @if($tab_color == palepink)
+  {
+  $colourr: $palepink;
+  }
+  @if($tab_color == blue)
+  {
+  $colourr: $babyblue;
+  }
+  @if($tab_color == purple)
+  {
+  $colourr: $purple;
+  }
+
+  @include page_tab($colourr); 
+  } 
+}
+ #triangle{
+   width:auto;
+   height:auto;
+   border:$border;
+  }
+
+  svg{
+    width:auto;
+    height:auto;
+  }
+   #testT{
+   width:auto;
+   height:425px;
+  // height:300px;
+  // background-image: url('../images/clearback.png');
+      @media screen and (max-width: 904px) {
+     width:auto;
+     }    
+      @media screen and (max-width: $small_width) {
+     display:none;
+     }
+  }
+#content
+{
+@include page_tab;
+@include opacity(100);
+ @media screen and (max-width: $small_width) {
+       width:auto;
+      }
+   
+  .maincontainer{
+    border:$border;
+    width:85%;
+    margin-top:1em;
+    margin:1em auto;
+  }
+h1 {
+  border:$border;
+  font-size:2em;
+  color:black;
+  @include opacity(100);
+
+}
+}
+
+
+/****** CSS CIRCLE EFFECT *********/
+.ch-grid {
+    margin: 0px 0 0 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    text-align: center;
+    width: 15.714em;
+    border:$border;
+    float:left;
+   
+}
+ 
+.ch-grid:after,
+.ch-item:before {
+    content: '';
+    display: table;
+}
+ 
+.ch-grid:after {
+    clear: both;
+}
+ 
+.ch-grid li {
+	font-size:14px;
+    width: $circle;
+    height: $circle;
+    display: inline-block;
+    margin: 0px;
+}
+ch-item {
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+    box-shadow:
+        inset 0 0 0 16px rgba(255,255,255,0.6),
+        0 1px 2px rgba(0,0,0,0.1);
+    transition: all 0.4s ease-in-out;
+}
+
+
+.ch-img-1 {
+    background-image: url("../images/invert.png");
+    background-size: 100%;
+}
+.ch-img-2 {
+    background-image: url("../images/2.jpg");
+}
+.ch-img-3 {
+    background-image: url("../images/3.jpg");
+}
+ 
+
+.ch-item {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    cursor: default;
+    box-shadow:
+        inset 0 0 0 0 rgba(000,000,000, 0.4),
+        inset 0 0 0 16px rgba(255,255,255,0.6),
+        0 1px 2px rgba(0,0,0,0.1);
+    transition: all 0.4s ease-in-out;
+}
+
+
+.ch-info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    transform: scale(0);
+    backface-visibility: hidden;
+}
+
+.ch-info h3 {
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin: 0 30px;
+    padding: 65px 0 0 0;
+    height: 7.857142885714286 em;
+    font-family: 'Open Sans', Arial, sans-serif;
+    text-shadow:
+        0 0 1px #fff,
+        0 1px 2px rgba(0,0,0,0.3);
+}
+ 
+.ch-info p {
+    color: #fff;
+    font-style: italic;
+    margin: 0px;
+    font-size: 12px;
+    border-top: 1px solid rgba(255,255,255,0.5);
+}
+ 
+.ch-info p a {
+    display: block;
+    color: rgba(255,255,255,0.7);
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 9px;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+ 
+.ch-info p a:hover {
+    color: rgba(255,242,34, 0.8);
+}
+
+.ch-item:hover {
+    box-shadow:
+        inset 0 0 0 110px rgba(255, 224, 215, 1.0),
+        inset 0 0 0 16px rgba(255,255,255,0.8),
+        0 1px 2px rgba(0,0,0,0.1);
+}
+
+.ch-item:hover .ch-info {
+    opacity: 1;
+    transform: scale(1);   
+}
+
+/****END CIRCLE EFFECT ****/

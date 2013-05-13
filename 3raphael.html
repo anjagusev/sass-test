@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	 <link rel="stylesheet" href="http://raphaeljs.com/demo.css"/>
+	  <style type="text/css" media="screen">
+#paper {
+    border:3px solid pink;
+    height:400px;
+    width:400px;
+}
+        </style>
+        <script src="js/raphael-min.js" type="text/javascript" charset="utf-8"></script>
+    
+      
+
+  
+        <script type="text/javascript" charset="utf-8">
+        window.onload = function () {
+Raphael.el.hoverInBounds = function(inFunc, outFunc) {
+    var inBounds = false;
+
+  // Mouseover function. Only execute if `inBounds` is false.
+    this.mouseover(function() {
+        if (!inBounds) {
+            inBounds = true;
+            inFunc.call(this);
+        }
+    });
+
+  // Mouseout function
+    this.mouseout(function(e) {
+    var x = e.offsetX || e.clientX,
+        y = e.offsetY || e.clientY;
+
+    // Return `false` if we're still inside the element's bounds
+        if (this.isPointInside(x, y)) return false;
+
+        inBounds = false;
+        outFunc.call(this);
+    });
+
+    return this;
+}
+   var Paper = Raphael("paper", 0, 0, 400, 300);
+ var path = Paper.path("M 0 287 l 159 -287 l 159 287 z");
+
+   //var Paper = Raphael("paper", 0, 0, 400, 300);
+
+//var Paper = new Raphael(0, 0, 400, 300);
+
+// Hover in function
+function hoverIn() {
+  this.animate({
+    r: 70
+  }, 500);
+}
+
+// Hover out function
+function hoverOut() {
+  this.animate({
+    r: 50
+  }, 500);
+}
+ var Paper = Raphael("paper", 0, 0, 400, 300);
+ var path = Paper.path("M 0 287 l 159 -287 l 159 287 z");
+path.attr({fill: 'red'});
+
+path.mouseover(function(){this.attr({fill: 'green'})});
+path.mouseout(function(){this.attr({fill: 'red'})});
+
+
+// Our dumb circle using `hover`.
+// Hovering over the text inside executes the hover in function.
+var circle1 = Paper.circle(100, 150, 50).attr('fill', 'red');
+circle1.text = Paper.text(100, 150, 'Hover me!').attr('font-size', 12);
+circle1.hover(hoverIn, hoverOut);
+
+// Our clever circle using `hoverInBounds`.
+// The hover out function is only triggered once outside the element's
+// bounds.
+var circle2 = Paper.circle(300, 150, 50).attr('fill', 'blue');
+circle2.text = Paper.text(300, 150, 'Hover me!').attr('font-size', 12);
+circle2.hoverInBounds(hoverIn, hoverOut);
+}
+        </script>
+	<title>Raphael Image</title>
+</head>
+<body >
+	<div id="cat"></div>
+    <div id="paper">mooo</div>
+    <section></section>
+</body>
+</html>

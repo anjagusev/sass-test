@@ -1,0 +1,646 @@
+* {
+	outline: none;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: #f5f0eb;
+	/* -webkit-font-smoothing: antialiased; */
+	-webkit-text-size-adjust: 100%;
+	color: #2e2c2a;
+}
+canvas {
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0;
+}
+em {
+	font-style: italic;
+}
+
+/*/////////////////////////////
+Top nav
+/////////////////////////////*/
+
+#header {
+	left: 0;
+	z-index: 100;
+	height: 59px;
+	margin: 0 0 40px 0;
+	background: #2e2c2a;
+	text-align: center;
+}
+#nav {
+	position: relative;
+	display: inline-block;
+	text-align: left;
+}
+#nav ul {
+	padding: 25px 0 0 0;
+	height: 34px;
+}
+#nav li a {
+	display: block;
+	height: 28px;
+	font: 600 11px/28px "Open Sans", sans-serif;
+	text-decoration: none;
+	color: #acabab;
+}
+#nav li {
+	display: block;
+	float: left;
+	padding: 0 14px;
+	cursor: pointer;
+}
+#nav li:hover a, #nav li.selected a {
+	color: #f5f0eb;
+}
+#nav a#logo {
+	position: absolute;
+	display: block;
+	top: 18px;
+	left: -61px;
+	width: 61px;
+	height: 58px;
+	background: url("http://static.rallyinteractive.com/img/logo.png");
+	text-indent: -9999px;
+}
+#underline {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 5px;
+	background: #f5f0eb;
+}
+
+/*/////////////////////////////
+Footer stuff
+/////////////////////////////*/
+
+#footer {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 40px;
+	background: #2e2c2a;
+	text-align: center;
+}
+#footer p {
+	font: 400 12px/40px "Open Sans", sans-serif;
+	color: #acabab;
+}
+#footer em {
+	font: 800 italic 12px/40px "Open Sans", sans-serif;
+}
+#footer #top {
+	display: none;
+	width: 81px;
+	height: 28px;
+	margin: 6px 0 0 0;
+	background: url("http://static.rallyinteractive.com/img/top.png");
+	text-indent: -9999px;
+	opacity: 0;
+}
+
+/*/////////////////////////////
+Footer left side
+/////////////////////////////*/
+
+#footer .left {
+	position: absolute;
+	left: 0;
+}
+#footer .left p {
+	float: left;
+	padding: 0 14px 0 12px;
+}
+#footer ul#share {
+	padding: 6px 0 0 0;
+}
+#footer ul#share, ul#share li {
+	float: left;
+}
+#footer ul#share a {
+	display: block;
+	width: 28px;
+	height: 28px;
+	margin: 0 2px 0 0;
+	background: url("http://static.rallyinteractive.com/img/sprite-share.png");
+	text-indent: -9999px;
+}
+
+/*/////////////////////////////
+Footer right side
+/////////////////////////////*/
+
+#footer ul#share li.tweet a {
+	background-position: 0 0;
+}
+#footer ul#share li.share a {
+	background-position: 0 -28px;
+}
+#footer .right {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#footer .right p {
+	float: left;
+	padding: 0 10px 0 0;
+}
+#footer .right p, #footer .right iframe {
+	float: left;
+}
+#footer .right iframe {
+	margin: 10px 0 0 0;
+}
+#footer iframe.twitter-follow-button {
+	width: 140px !important;
+}
+#footer iframe.twitter-share-button {
+	width: 110px !important;
+}
+#footer #webby {
+	display: block;
+	float: left;
+	font: bold 10px/40px Helvetica, Arial, sans-serif;
+	padding: 0 10px 0 0;
+	color: #f5f0eb;
+	text-transform: uppercase;
+}
+
+/*/////////////////////////////
+Intro section
+/////////////////////////////*/
+
+.intro {
+	overflow: hidden;
+	text-align: center;
+}
+.intro p {
+	margin: -8px 0 0 0;
+	padding: 0 10px 26px 10px;
+	font: bold 14px/20px Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+.intro h1 {
+	display: inline-block;
+	padding: 0 10px;
+	font: bold 64px/93px Helvetica, Arial, sans-serif;
+	letter-spacing: -3px;
+	background: #f5f0eb;
+}
+
+#arrows {
+	position: absolute;
+	left: 50%;
+	width: 800px;
+	height: 93px;
+	margin: 0 0 0 -400px;
+	background: url("http://static.rallyinteractive.com/img/line.png") repeat-x;
+}
+#arrows a#back, #arrows a#next {
+	display: block;
+	position: absolute;
+	z-index: 10;
+	top: 16px;
+	height: 0;
+	width: 58px;
+	padding-top: 58px;
+	overflow: hidden;
+	/* text-indent: -9999px; */
+	background: url("http://static.rallyinteractive.com/img/arrow.png") -2px -2px;
+}
+#arrows a#back {
+	left: -65px;
+}
+#arrows a#next {
+	right: -65px;
+	/* text-indent: 9999px; */
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
+}
+#arrows .disabled {
+	opacity: .4;
+	cursor: default;
+}
+ul#titles {
+	position: absolute;
+	width: 800px;
+}
+ul#titles li {
+	display: none;
+	position: absolute;
+	right: -5px;
+	padding: 0 5px;
+	font: bold 24px/93px Helvetica, Arial, sans-serif;
+	letter-spacing: -1px;
+	background: #f5f0eb;
+}
+
+/*/////////////////////////////
+Page content
+/////////////////////////////*/
+
+.page {
+	position: absolute;
+	left: 0;
+	right: 0;
+	text-align: center;
+	margin-left: -9999px;
+	padding: 0 0 0 0;
+}
+.page .content {
+	display: inline-block;
+	padding: 0 0 20px 0;
+}
+
+/*/////////////////////////////
+Clients
+/////////////////////////////*/
+
+#clients img {
+	display: block;
+	margin: 0 0 0 0;
+}
+#clients h1 img {
+	display: inline;
+	vertical-align: bottom;
+}
+#clients .content {
+	height: 53px;
+}
+
+/*/////////////////////////////
+Talk to Us
+/////////////////////////////*/
+
+#contact .content {
+	text-align: left;
+}
+#contact .content h2 {
+	font: bold 22px/36px Helvetica, Arial, sans-serif;
+}
+#contact .content a {
+	font: bold italic 14px/14px Helvetica, Arial, sans-serif;
+	color: #928e89;
+}
+#contact .content a:hover {
+	color: #000000;
+}
+#contact #newBusiness, #contact #stalk {
+	float: left;
+}
+#contact #newBusiness {
+	padding: 0 38px 0 0;
+}
+#contact li {
+	float: left;
+}
+#contact li a {
+	display: block;
+	height: 17px;
+	margin: 0 5px 0 0;
+	text-indent: -9999px;
+}
+#contact li#talkTweet a {
+	width: 27px;
+	background: url("http://static.rallyinteractive.com/img/sprite-twitter.png") -2px -82px;
+}
+#contact li#talkShare a {
+	width: 17px;
+	background: url("http://static.rallyinteractive.com/img/sprite-share.png") -22px -122px;
+}
+#contact li a:hover {
+	background-position: 0 -24px;
+}
+
+/*/////////////////////////////
+About Rally
+/////////////////////////////*/
+
+#about #overview {
+	width: 771px;
+	padding: 0 0 20px 0;
+	overflow: hidden;
+	text-align: left;
+}
+#about #overview p {
+	font: 12px/20px Helvetica, sans-serif;
+	text-align: justify;
+}
+#about #overview h3 {
+	margin: 0 0 14px 0;
+	background: url("http://static.rallyinteractive.com/img/hr.png") repeat-x center center;
+	font: bold 30px/30px Helvetica, Arial, sans-serif;
+	letter-spacing: -1px;
+}
+#about #overview h3 span {
+	padding: 0 6px 0 0;
+	background: #f5f0eb;
+}
+#about #overview div {
+	float: left;
+	width: 375px;
+}
+#about #overview #why {
+	padding: 0 20px 0 0;
+}
+#about #stats {
+	position: relative;
+	height: 165px;
+	padding: 0 0 36px 0;
+}
+#about #stats img {
+	position: absolute;
+	display: block;
+}
+#about #stats img#statsDark {
+	opacity: 0;
+}
+#about #stats p {
+	position: absolute;
+	font: bold 140px/140px Helvetica, Arial, sans-serif;
+	letter-spacing: -4px;
+}
+#about #stats p#statsPersons {
+	left: 25px;
+}
+#about #stats p#statsDirect {
+	left: 288px;
+}
+#about #stats p#statsPartnerships {
+	left: 566px;
+}
+
+#bios {
+	overflow: hidden;
+	width: 771px;
+	height: 0;
+	margin: 0 auto;
+	text-align: center;
+}
+#biosInner {
+	width: 807px;
+	padding: 0 0 36px 0;
+	text-align: left;
+	overflow: hidden;
+}
+#bios .bio {
+	float: left;
+	width: 233px;
+	padding: 0 36px 0 0;
+}
+#bios .bioPhoto {
+	padding: 4px;
+	margin: 0 0 22px 0;
+	background: #cfc9c4;
+}
+#bios .bioPhoto img {
+	display: block;
+}
+#bios .bioTitle {
+	position: relative;
+	padding: 0 0 12px 0;
+}
+#bios .bioTitle h3 {
+	font: bold 22px/22px Helvetica, Arial, sans-serif;
+}
+#bios .bioTitle ul {
+	position: absolute;
+	top: 5px;
+	right: 0;
+}
+#bios .bioTitle li {
+	float: left;
+	margin: 0 0 0 5px;
+}
+#bios .bioTitle ul a {
+	display: block;
+	height: 15px;
+	text-indent: -9999px;
+}
+#bios .bioTitle li.littleTweet a {
+	width: 22px;
+	background: url("http://static.rallyinteractive.com/img/sprite-bio-tweet.png") -2px -2px;
+}
+#bios .bioTitle li.littleShare a {
+	width: 14px;
+	background: url("http://static.rallyinteractive.com/img/sprite-bio-share.png") -2px -2px;
+}
+#bios .bioTitle li.littleIn a {
+	width: 15px;
+	background: url("http://static.rallyinteractive.com/img/sprite-bio-in.png") -2px -2px;
+}
+#bios .bioTitle p {
+	background: url("http://static.rallyinteractive.com/img/hr.png") repeat-x center center;
+	font: bold italic 12px/22px Helvetica, Arial, sans-serif;
+}
+#bios .bioTitle span {
+	padding: 0 6px 0 0;
+	background: #f5f0eb;
+}
+#bios .bioText p {
+	font: 12px/20px Helvetica, Arial, sans-serif;
+	text-align: justify;
+}
+a#bioToggle {
+	display: inline-block;
+	height: 33px;
+	width: 216px;
+	padding: 0 5px;
+	background: #2e2c2a url("http://static.rallyinteractive.com/img/toggle-down.png") repeat-y 5px 0;
+	font: 12px/33px Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	text-align: center;
+	color: #f5f0eb;
+}
+#home .content {
+	display: none;
+}
+
+/*/////////////////////////////
+Content area
+/////////////////////////////*/
+
+#filters {
+	height: 38px;
+	background: url("http://static.rallyinteractive.com/img/bar.png");
+	margin: 0 0 40px 0;
+}
+#filters p {
+	float: left;
+	padding: 0 5px;
+	font: bold italic 12px/38px Helvetica, Arial, sans-serif;
+	background: #f5f0eb;
+	color: #928e89;
+}
+#filtersInner {
+	width: 920px;
+	margin: 0 auto;
+}
+#triangles {
+	position: relative;
+	background: url("http://static.rallyinteractive.com/img/triangles-bg.png");
+	padding: 0 0 80px 0;
+	z-index: 5;
+}
+#trianglesInner {
+	overflow: hidden;
+	margin: 0 auto;
+	width: 1200px;
+}
+
+/*/////////////////////////////
+Responsive stuff
+/////////////////////////////*/
+
+.huge #trianglesInner {
+	width: 1200px;
+}
+.big #trianglesInner, .medium #trianglesInner{
+	width: 800px;
+}
+.small #trianglesInner {
+	width: 320px;
+}
+.small #trianglesInner canvas {
+	margin: 0 0 0 -40px;
+}
+
+.small #about #overview {
+	width: 300px;
+}
+.small #about #bios {
+	width: 300px;
+}
+.small #about #overview div {
+	float: none;
+	width: 300px;
+}
+.small #about #overview #why {
+	padding: 0 0 20px 0;
+}
+/*
+.small #about #overview p {
+	font: 12px/20px Helvetica, sans-serif;
+}
+*/
+.small #about #stats {
+	display: none;
+}
+
+.medium .intro h1 {
+	font: bold 54px/93px Helvetica, Arial, sans-serif;
+}
+.small .intro h1 {
+	font: bold 38px/64px Helvetica, Arial, sans-serif;
+	letter-spacing: -1px;
+}
+
+.small #footer .right {
+	display: none;
+}
+.small #footer #top {
+	display: none !important;
+}
+#footer.noFixed {
+	position: relative !important;
+}
+
+.giant #arrows, .big #arrows {
+	width: 800px;
+	margin: 0 0 0 -400px;
+}
+.medium #arrows {
+	width: 470px;
+	margin: 0 0 0 -235px;
+}
+.small #arrows {
+	display: none;
+}
+
+.giant ul#titles, .big ul#titles {
+	width: 800px;
+}
+.medium ul#titles, .small ul#titles {
+	display: none;
+}
+
+.small #biosInner {
+	width: 300px;
+	padding: 0;
+}
+.small #bios .bio {
+	float: none;
+	width: 233px;
+	margin: 0 auto;
+	padding: 0 0 36px 0;
+}
+
+#clients #logosSmall {
+	display: none;
+}
+.small #clients #logosBig {
+	display: none;
+}
+.small #clients #logosSmall {
+	display: block;
+}
+.small #clients .content {
+	height: 163px;
+}
+.small #clients h1 img {
+	width: 26px;
+	height: 32px;
+	vertical-align: middle !important;
+}
+
+.giant #filtersInner {
+	width: 920px;
+}
+.big #filtersInner, .medium #filtersInner {
+	width: 800px;
+}
+.small #filtersInner {
+	width: 320px;
+}
+
+.small #nav a#logo {
+	top: 5px;
+	left: 50%;
+	margin-left: -30px;
+}
+.small #header {
+	height: 89px;
+	margin: 0 0 40px 0;
+	background: #2e2c2a;
+	text-align: center;
+}
+.small #nav ul {
+	padding: 55px 0 0 0;
+	height: 34px;
+}
+.small .intro p {
+	font: bold 14px/20px Helvetica, Arial, sans-serif;
+}
+
+.small #contact .content h2 {
+	font: bold 18px/28px Helvetica, Arial, sans-serif;
+}
+.small #contact .content a {
+	font: bold italic 12px/12px Helvetica, Arial, sans-serif;
+}
+.small #contact #newBusiness {
+	padding: 0 28px 0 0;
+}
