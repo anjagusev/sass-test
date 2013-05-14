@@ -451,12 +451,16 @@ h1 {
    ========================================================================== */
 
 #about {
-background: url("../images/ESCHERESQUE_STE.png") repeat fixed 100% 0 transparent;;
+background: url("../images/ESCHERESQUE_STE.png") repeat fixed 100% 0 transparent;
 margin:$centered;
  min-height: 30em; 
+ height:auto;
  padding-top:4.938em;
-}
 
+ @media screen and (max-width: 850px){
+  height:50em;
+ }
+}
 .aboutContainer{
   line-height:.75em;
   vertical-align:baseline;
@@ -464,6 +468,14 @@ margin:$centered;
   padding: 0;
   position: relative;
   max-width: 60em;
+   @media screen and (max-width: 850px){
+  width:100%;
+  margin:0 auto;
+  padding:0;
+  text-align:center;
+  float:none;
+  clear:both;
+ }
 }
 
 .blurbContain{
@@ -473,6 +485,8 @@ margin:$centered;
   margin-left:0.625em;
   margin-right:0.625em;
   vertical-align: baseline;
+
+   
 }
 .blurbAbout{
   padding-right:3.750em;
@@ -490,6 +504,20 @@ font-weight:100;
     margin-bottom: 1em;
     text-transform: uppercase;
   }
+   @media screen and (max-width: 860px){
+  padding:0;position:relative;
+  margin:0 auto;
+  padding:0;
+  text-align:center;
+  float:none;
+  clear:both;
+  width:20em;
+ }
+  @media screen and (max-width: 780px){
+  width:30em;
+position:relative;
+  margin:0 auto; 
+ }
   
 }
 .size22{
@@ -670,13 +698,17 @@ background: white ;
 margin:$centered;
  min-height: 30em; 
  padding-top:4.938em;
+ line-height:2em;
 }
 
 .webContainer{
   @extend .aboutContainer;
+ 
     font-family: $lato;
+  
     font-weight:100;
  font-size:1em;
+  line-height:2em;
   h2{
   font-size:2.4em;
  }

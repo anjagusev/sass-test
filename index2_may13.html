@@ -133,13 +133,13 @@
 		</section><!--/blurbRight-->
 	</div><!--/aboutContain-->
 </section><!--/about-->
-
+<div class="clearfloat"></div>
 <section id="webWork">
 <div class="webContainer">
 	<h2>Web Development Work</h2>
 	<p><a class="various" data-fancybox-type="iframe" href="http://www.anja-gusev.com"  >Iframe</a></p>
-</div>
-</section>
+</div><!--/webContainer-->
+</section><!--/webWork-->
 <script type="text/javascript">
 $(document).ready(function() {
 	$(".various").fancybox({
@@ -150,6 +150,11 @@ $(document).ready(function() {
         fitToView:true,
         autoScale:false,
         autoDimensions:true,
+         beforeShow: function(){
+  // added 50px to avoid scrollbars inside fancybox
+   this.width = ($('.fancybox-iframe').contents().find('com').width())+50;
+   this.height = ($('.fancybox-iframe').contents().find('com').height())+50;
+  }
     });
 });
 </script>
