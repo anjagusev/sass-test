@@ -1,8 +1,12 @@
 @import "compass/reset";
-@import url(http://fonts.googleapis.com/css?family=Lato:400,300);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,400,300);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800);
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
-@import "cross_browser_opacity.scss";
+@import "../sass/cross_browser_opacity.scss";
+@import "../sass/general_enclosed_foundicons.scss";
+@import "../sass/general_foundicons.scss";
+@import "../sass/fonts.scss";
+  
 
 
 $small_width: 620px;
@@ -54,10 +58,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
         width:100%;
         margin:$centered; }
 
-#footer #ul {
-  list-style: none;
-  display:inline;
-}
+
 #test{
   width:100%;
   height:auto;
@@ -75,6 +76,12 @@ only screen and (min-device-pixel-ratio : 1.5) {
   margin:$centered;
 }
 }
+
+
+/* ==========================================================================
+   Top Right Navigation
+   ========================================================================== */
+
 	nav {
 	max-width: 20em;
 	border: $border;
@@ -98,6 +105,55 @@ only screen and (min-device-pixel-ratio : 1.5) {
 }
 }
 
+
+/* ==========================================================================
+   Always Visible Arrow
+   ========================================================================== */
+
+.trigger{
+   color:#fff;
+    left: 95%;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    width: 50px;
+    z-index: 100;
+    text-decoration: none;
+    border:none;
+    i {
+      border:none;
+
+    }
+}
+a{
+  border:none;
+}
+
+.scroll a, .hideclick a {
+  color:white;
+   border:none;
+  a, i{
+    text-decoration: none;
+    border:none;
+
+  }
+}
+
+.foundicon-up-arrow:before {
+font-family: "GeneralFoundIcons";
+font-weight: normal;
+font-style: normal;
+text-decoration: none;
+border:none;
+.foundicon-up-arrow:{}
+.general{}
+}
+
+/* ==========================================================================
+   First Page
+   ========================================================================== */
+
+
 #home
 {
   margin:$centered;
@@ -105,6 +161,7 @@ margin-top:.5em;
 max-width:$page_width;
 
 }
+
 #location
 {
   
@@ -113,6 +170,11 @@ margin-left:-1em;
 margin-left:-2em;
      } 
 }
+
+/* ==========================================================================
+   Intro Selection
+   ========================================================================== */
+
 #intro {
   width:16em;
 	border:$border;
@@ -141,7 +203,7 @@ font-size:2.5em;
 width:auto;
 font-size:2.3em;
      }
-     @media screen and (max-width: 838px + 64px) {
+     @media screen and (max-width: 834px + 64px) {
 width:60%;
 font-size:2.2em;
      } 
@@ -154,15 +216,7 @@ font-size:2em;
 
 
      } 
-/*     @media screen and (max-width: 1004px) {
-  font-size:2.6em;
-     } 
-  /* @media screen and (max-width: 1090px) {
-  font-size:2.8em;
-     } 
-     @media screen and (max-width: 1004px) {
-  font-size:2.6em;
-     } */
+
      @media screen and (max-width: $small_width), only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
       display:none;
@@ -188,26 +242,10 @@ letter-spacing:-1px;
 
 }
 
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
 
-#about {
-background: url("../images/ESCHERESQUE_STE.png") repeat fixed 100% 0 transparent;;
-margin:$centered;
- min-height: 1000px; 
-}
-
-footer{
-	border:$border;
-
-	margin:$centered;
-	height:5em;
-     margin:$centered;
-   max-width:$page_width;
-//	background:rgba(000, 000, 255, 0.1);
-@media screen and (max-width: $small_width), only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-  width:auto;
-}
-}
 
 #selection {
 
@@ -303,15 +341,14 @@ only screen and (min-device-pixel-ratio : 1.5) {
   min-height:20em;
   border:$border;
   @include opacity(60);
-  @if $color != none {
-  background: lighten($color, 0%);
-  padding:2em;
+    @if $color != none {
+    background: lighten($color, 0%);
+    padding:2em;
 
- @media screen and (max-width: $small_width){
-     display:none;
+   @media screen and (max-width: $small_width){
+       display:none;
+      }
     }
-  }
-  
 }
 
 @each $tab_color in green, cream, pink, palepink, purple, blue {
@@ -343,17 +380,26 @@ $colourr:none;
   @include page_tab($colourr); 
   } 
 }
+
+
  #triangle{
       margin:$centered;
-   width:$page_width;
+   max-width:$page_width;
    height:auto;
    border:$border;
   }
 
-  svg{
+  
+
+/* ==========================================================================
+   SVG Graphic
+   ========================================================================== */
+
+svg{
     width:auto;
     height:auto;
   }
+
    #testT{
 
    height:425px;
@@ -363,16 +409,23 @@ $colourr:none;
   // height:300px;
   // background-image: url('../images/clearback.png');
       @media screen and (max-width: 904px) {
-     width:$page_width/1.2;
+     max-width:$page_width/1.2;
      }    
       @media screen and (max-width: $small_width) {
      display:none;
      }
   }
+
+
+/* ==========================================================================
+   Content Section
+   ========================================================================== */
+
 #content
 {
 @include page_tab;
 @include opacity(100);
+min-height:0;
  @media screen and (max-width: $small_width) {
        width:auto;
       }
@@ -393,7 +446,274 @@ h1 {
 }
 
 
-/****** CSS CIRCLE EFFECT *********/
+/* ==========================================================================
+   About Container
+   ========================================================================== */
+
+#about {
+background: url("../images/ESCHERESQUE_STE.png") repeat fixed 100% 0 transparent;;
+margin:$centered;
+ min-height: 30em; 
+ padding-top:4.938em;
+}
+
+.aboutContainer{
+  line-height:.75em;
+  vertical-align:baseline;
+  margin:$centered;
+  padding: 0;
+  position: relative;
+  max-width: 60em;
+}
+
+.blurbContain{
+  max-width:28.750em;
+  display:inline;
+  float:left;
+  margin-left:0.625em;
+  margin-right:0.625em;
+  vertical-align: baseline;
+}
+.blurbAbout{
+  padding-right:3.750em;
+color:white;
+font-weight:100;
+  p{
+     line-height: 1.438em;
+     margin-bottom:1.375em;
+  }
+  h3 {
+      font-size: 2em;
+      padding:0;
+      margin:0;
+    line-height: 2em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+  }
+  
+}
+.size22{
+  font-weight:400;
+  font-size:1.375em;
+  line-height: 1.938em;
+  p {
+    margin-bottom:1.375em
+  }
+}
+
+.blurbRight{
+  max-width:28.750em;
+  margin:0;
+  margin-right:.625em;
+  margin-left:0.625em;
+font-size:.75em;
+font-weight:400;
+  vertical-align: baseline;
+  display:block;
+  float:left;
+  display:inline;
+}
+
+.features 
+{
+  color:white;
+  font-family:$sans;
+  line-height:.750em;
+  vertical-align: baseline;
+  margin:0;
+
+  ul{
+    position:relative;
+  }
+  
+  li:after {
+    background-color: pink;
+    content: "";
+    height: 100%;
+    left: 2.375em;
+    position: absolute;
+    top: 1.063em;
+    width:.063em;
+    padding-bottom: 2.938em;
+  }
+  .design{
+    line-height:.75em;
+  }
+  li p {
+      
+      
+       top:.6em;
+  }
+  li{
+    position:relative;
+  }
+  ul.features li:last-child:after {
+    background-color: transparent;
+  }
+  ol, ul {
+    list-style:none outside none;
+  }
+
+  h4{
+    font-size: 1.125em;
+    line-height: 1.125em;
+    margin-bottom: 0.750em;
+    text-transform: uppercase;
+    vertical-align: baseline;
+   
+    list-style-position: outside;
+    border-image-width:1 1 1 1;
+    color:#88939A;
+    font-weight:400;
+  }
+  p{ 
+    margin:0;
+    padding:0;
+    vertical-align: baseline;
+  line-height: 1.438em;
+}
+
+
+//.spritesheet.icndesign    { background-position: 0 3.250em; width: 3.063em; height: 2.563em;  background-position: 0 -9688em; }
+.icn {
+    background-color: #89949B;
+    border-radius: 100% 100% 100% 100%;
+    display: block;
+    float: left;
+    height: 4.875em;
+    left: 0;
+    line-height: 4.750em;
+    margin-right: 2.500em;
+    position: absolute;
+    text-align: center;
+    top: 1.063em;
+    transition: background 0.2s linear 0s;
+    width: 4.875em;
+    z-index: 1;
+    padding: 0;
+    vertical-align:middle;
+}
+li:after{
+      background-color: #E8E8E8;
+      content: '';
+      position: absolute;
+      left: 2.375em;
+      top: 1.063em;
+      height: 100%;
+      width: 1px;
+      line-height: 4.750em;
+    } 
+}//end features ul
+
+ul.features{ position: relative; }
+  ul.features li {
+      padding-bottom: 2.938em;
+      padding-left: 7.500em;
+      position: relative;
+  }
+    ul.features li:after{
+      background-color: #E8E8E8;
+      content: '';
+      position: absolute;
+      left: 2.375em;
+      top: 1.063em;
+      height: 100%;
+      width: 1px;
+      line-height: 4.750em;
+    } 
+     ul.features li:last-child:after { background-color: transparent; padding-bottom:2.938em; }
+    ul.features li span.icn {
+      background-color: #89949B;
+      border-radius: 100% 100% 100% 100%;
+      display: block;
+      float: left;
+      height: 4.875em;
+      left: 0;
+      line-height:  4.750em;
+      margin-right: 2.50em;
+      position: absolute;
+      text-align: center;
+      -webkit-transition: background 0.2s linear 0s;
+      -moz-transition: background 0.2s linear 0s;
+      -o-transition: background 0.2s linear 0s;
+      -ms-transition: background 0.2s linear 0s;
+      transition: background 0.2s linear 0s;
+      top: 1.063em;
+      width: 4.875em;
+      z-index: 1;
+    }
+    
+      ul.features li span.icn > span { vertical-align: middle; }
+      ul.features li span.icn > span.spritesheet.icnbranding{ top:0.250em; }
+      
+      ul.features li span.icn:hover{ background-color: #A1AEB7; }
+
+.spritesheet {
+       background-repeat: no-repeat;
+    display: inline-block;
+    position: relative;
+}
+.spritesheet .icndesign {
+    background-position: 0 -3.250em;
+    height: 2.563em;
+    width: 2.938em;
+     vertical-align:middle;
+     text-align:center;
+}
+
+/* ==========================================================================
+   Web Work Container
+   ========================================================================== */
+
+#webWork {
+background: white ;
+margin:$centered;
+ min-height: 30em; 
+ padding-top:4.938em;
+}
+
+.webContainer{
+  @extend .aboutContainer;
+    font-family: $lato;
+    font-weight:100;
+ font-size:1em;
+  h2{
+  font-size:2.4em;
+ }
+}
+
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+
+footer{
+  border:$border;
+
+  margin:$centered;
+  height:5em;
+     margin:$centered;
+   max-width:$page_width;
+//  background:rgba(000, 000, 255, 0.1);
+@media screen and (max-width: $small_width), only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+  width:auto;
+}
+}
+
+#footer #ul {
+  list-style: none;
+  display:inline;
+}
+
+
+ 
+    
+/* ==========================================================================
+   Circle Effect 
+   ========================================================================== */
 .ch-grid {
     margin: 0px 0 0 0;
     padding: 0;
