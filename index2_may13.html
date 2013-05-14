@@ -7,6 +7,13 @@
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <!--<script src="js/prefixfree.min.js"></script>-->
 
+
+<!-- Add mousewheel plugin (this is optional) -->
+<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
 <script src="jquery.js"></script><script src="js/raphael-min.js"></script>
 <!--<script src="js/triangles.js"></script>-->
 <!--[if IE]>
@@ -130,8 +137,22 @@
 <section id="webWork">
 <div class="webContainer">
 	<h2>Web Development Work</h2>
+	<p><a class="various" data-fancybox-type="iframe" href="http://www.anja-gusev.com"  >Iframe</a></p>
 </div>
 </section>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".various").fancybox({
+        type: 'iframe',
+        autoSize : true,
+        scrolling:'auto',
+        autoCenter:true,
+        fitToView:true,
+        autoScale:false,
+        autoDimensions:true,
+    });
+});
+</script>
 <div id="triangle"></div> 
 <footer><div class="social"> <i class="gen-enclosed foundicon-tools"></i>  <ul><li><i class="foundicon-facebook"></i><i class="foundicon-twitter"></i></li></ul></div></footer>
 </body>
