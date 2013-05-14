@@ -135,11 +135,100 @@
 </section><!--/about-->
 <div class="clearfloat"></div>
 <section id="webWork">
-<div class="webContainer">
-	<h2>Web Development Work</h2>
-	<p><a class="various" rel="gallery" data-fancybox-type="iframe" href="http://www.anja-gusev.com" ><img width="300" height="100" src="images/chanda.png" alt=""/></a></p>
-</div><!--/webContainer-->
+	<div class="webContainer">
+		<h2>Web Development Work</h2>
+		<section class="icons">
+			<div class="webIcon">
+				<a class="various" rel="gallery" data-fancybox-type="iframe" onmouseover="change('contactbutton','images/contact_over.gif');" 
+ onmouseout="change('contactbutton','images/contact_box.gif');" href="http://fancyapps.com/fancybox/" ><img height="250" width="300" src="images/timmins3.png" name="timmins" alt=""/></a>
+			</div>  
+			<div class="webIcon">
+				<a class="various" rel="gallery" data-fancybox-type="iframe" href="http://fancyapps.com/fancybox/" ><img height="250" width="300" src="images/barterful2.png" name="barterful" alt=""/></a>
+			</div>
+			<div class="webIcon">
+				<a class="various" rel="gallery" data-fancybox-type="iframe" href="http://fancyapps.com/fancybox/" ><img name="lapapa" height="250" width="300" src="images/lapapa2.png" alt=""/></a>
+			</div>
+			<div class="webIcon">
+				<a class="various"  rel="gallery" dta-fancybox-type="iframe" href="http://fancyapps.com/fancybox/" ><img height="250" name="portfolio1" width="300" src="images/portfolioMockup.png" alt=""/></a>
+			</div>  
+			<div class="webIcon">
+				<a class="various" rel="gallery" data-fancybox-type="iframe" href="http://fancyapps.com/fancybox/" ><img height="250" name="portfolio2" width="300" src="images/portfolio2.png" alt=""/>
+				</a>
+			</div> 		
+		</section><!--/icons-->
+	</div><!--/webContainer-->
 </section><!--/webWork-->
+
+<section class="resume">
+	<div class="resumeContainer">
+		<section class="collapsable collapsed" id="experience" style="height: 40em;">
+			<header>
+				<div class="wrapper">
+					<button class="close-btn"></button>
+					<h2>Work Experience</h2>
+				</div>
+			</header>
+			<div class="wrapper">
+				<article>
+						<hgroup class="column-1">
+							<h3>Co-Founder &amp; CEO </h3>
+							<h6>Sep 2012 - Present</h6>
+						</hgroup>
+						<div class="column-2">
+							<hgroup>
+								<a target="_blank" href="http://cmplain.com" class="button">visit site</a>
+								<h3>Cmplain - Customer Feedback Social Platform</h3>
+								<h6>Worldwide</h6>
+						  </hgroup>
+							<p>An online platform focused on customer feedback acquisition as a social interaction. Responsible for the idea, design and business management.</p>
+					  </div>
+				</article> 
+				<article>
+					<hgroup class="column-1">
+						<h3>Co-Founder</h3>
+						<h6>Dec 2009 - Present</h6>
+					</hgroup>
+					<div class="column-2">
+						<hgroup>
+							<a target="_blank" href="http://bons.com.ar" class="button">visit site</a>
+							<h3>Bons - User Interface &amp; Branding Solutions</h3>
+							<h6>Buenos Aires, Argentina</h6>
+					  </hgroup>
+						<p>Specialized in User Interface, Web design and Branding. Highly focused on usability, user experience and product design. Also, responsible for managing internal development resources.</p>
+				  </div>
+			  </article> 
+				<article>
+					<hgroup class="column-1">
+						<h3>Senior UI / Web Designer</h3>
+						<h6>May 2011 - Nov 2011</h6>
+					</hgroup>
+					<div class="column-2">
+						<hgroup>
+							<a target="_blank" href="http://giro54.com" class="button">visit site</a>
+							<h3>Giro54 - User Experience Design</h3>
+							<h6>Buenos Aires, Argentina</h6>
+						</hgroup>
+						<p>Responsible for designing and planning (information architecture) corporate websites, web applications, intranets and mobile applications (iPhone/iPad). Having special focus on user experience design and usability. As well as participating in the interaction with different national and international clients and internal development resources.</p>
+					</div>
+				</article>				
+				<article>
+					<hgroup class="column-1">
+						<h3>Branding / Web Designer</h3>
+						<h6>Jan 2009 - Dec 2010</h6>
+					</hgroup>
+					<div class="column-2">
+						<hgroup>
+							<h3>Freelance</h3>
+							<h6>Worldwide</h6>
+						</hgroup>
+						<p>Working with different clients worldwide, specially in branding and web design projects. Also collaborated with design studios and branding agencies. As freelance designer I had the opportunity to work for big branding and interactive projects.</p>
+					</div>
+				</article>
+			</div>
+		</section>
+
+	</div><!--/sectionContainer-->
+</section><!--/section-->
 <script type="text/javascript">
 $(document).ready(function() {
 	$(".various").fancybox({
@@ -157,6 +246,7 @@ $(document).ready(function() {
     });
 });
 </script>
+<script src="js/plugin.js"></script>
 <div id="triangle"></div> 
 <footer><div class="social"> <i class="gen-enclosed foundicon-tools"></i>  <ul><li><i class="foundicon-facebook"></i><i class="foundicon-twitter"></i></li></ul></div></footer>
 </body>

@@ -117,10 +117,67 @@ $(document).ready(function(){
 	
 	// fade in containing div
 	$("#fading").fadeIn('slow');
+
+	$('.collapsable').each(function(){
+			var eHeight = $(this).outerHeight(true);
+			var dHeight = $(document).height();
+			var wHeight = window.innerHeight || $(window).height(); 
+			
+			// guardamos el tamano desplegado del section para volver a abrirlo
+			$(this).data('fullHeight', eHeight);
+			
+			/* cerramos los sections siempre y cuando el resultado
+			 	no sea menor al alto de la ventana, de esta forma evitamos
+			 	que Safari iOS no agrande el sitio para completar el alto del viewport */
+			 	
+			//console.log(dHeight, eHeight, wHeight);
+			if(dHeight - eHeight > wHeight){
+				$(this)
+					.css('height', $(this).children('header').outerHeight(true))
+					.addClass('collapsed');
+			}
+		});
+	
+		$('.collapsable header').click(function(){
+			var section = $(this).parent();
+			if(section.hasClass('collapsed')){
+				section.animate({
+					'height': section.data('fullHeight')
+				}, 'slow', 'easeInOutCubic')
+					.removeClass('collapsed')
+					.find('canvas').each(function(){
+						$(this).data('animation').restart()
+					});
+					
+				PXC.smoothScrollTo($(this));
+			}else{
+				section.animate({
+						'height': $(this).outerHeight(true)
+					}, 'normal', 'easeInOutCubic')
+						.addClass('collapsed');
+			}
+		});
+		
+
 	
 	
 });
 
+var PXC = {
+
+	elements: {},
+	animations: {},
+	params: {
+		isReady: false,
+		isBusy: false
+	},
+	
+	init: function(){
+		
+		$('body').addClass('ready'); // util para activar animaciones CSS3
+		
+		}
+	};	
 // When called, hides all divs using the class name .showhide
 $.fn.hideDiv = function(e)
 {
