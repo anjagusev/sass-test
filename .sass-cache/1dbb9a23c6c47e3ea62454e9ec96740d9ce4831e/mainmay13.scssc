@@ -1,7 +1,7 @@
 3.2.8 (Media Mark)
-1d872f0d6d491c4e9875433164779995386584ae
+3f72ee766607e61644367cb1269ed5645464fa58
 o:Sass::Tree::RootNode
-:@template"lW@import "compass/reset";
+:@template"mW@import "compass/reset";
 @import url(http://fonts.googleapis.com/css?family=Lato:100,400,300);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800);
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
@@ -424,7 +424,7 @@ svg{
     float:none;
     clear:both;
 top:10;
-margin-top:2em;
+margin-top:-2em;
  height: 100%; 
   // height:825px;
    margin:$centered;
@@ -1460,7 +1460,7 @@ cream;@;ioo;	;0;@;io;{	;iË; iÿ;!i;"iÀo;	;;;"palepink;@;
 ;50;6o;7;8{ ;2[o;D;["
 testT;:" ;i¤;:@²	;i¤;:@²	;i¤;T;@;;i ;	[o;<;["
 float;o;;;;"	none;@;=;>;@;;i ;	[ ;i¥o;<;["
-clear;o;;;;"	both;@;=;>;@;;i ;	[ ;i¦o;<;["top;o;;;;"10;@;=;>;@;;i ;	[ ;i§o;<;["margin-top;o;;;;"2em;@;=;>;@;;i ;	[ ;i¨o;<;["height;o;;;;"	100%;@;=;>;@;;i ;	[ ;i©o;,
+clear;o;;;;"	both;@;=;>;@;;i ;	[ ;i¦o;<;["top;o;;;;"10;@;=;>;@;;i ;	[ ;i§o;<;["margin-top;o;;;;"	-2em;@;=;>;@;;i ;	[ ;i¨o;<;["height;o;;;;"	100%;@;=;>;@;;i ;	[ ;i©o;,
 ;:silent;["/* height:825px; */;@;	[ ;iªo;<;["margin;o;A	;"centered;@;i«;B"centered;=;>;@;;i ;	[ ;i«o;,
 ;;X;["M/* height:300px;
  * background-image: url('../images/clearback.png'); */;@;	[ ;i®o;C;T;" ;@;;i ;	[o;<;["

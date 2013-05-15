@@ -1116,7 +1116,7 @@ svg {
   float: none;
   clear: both;
   top: 10;
-  margin-top: 2em;
+  margin-top: -2em;
   height: 100%;
   margin: 0 auto;
 }
