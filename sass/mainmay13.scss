@@ -6,6 +6,7 @@
 @import "../sass/general_enclosed_foundicons.scss";
 @import "../sass/general_foundicons.scss";
 @import "../sass/fonts.scss";
+@import "compass/css3";
   
 
 
@@ -971,7 +972,24 @@ h2{
 
 
 } }
-.collapsable header:hover { background-color: #ffffff; color:black; }
+
+@function resume($opacity){
+    @return rgba(132,147,154,$opacity)
+}
+
+.collapsable header:hover { 
+  background-color: #84939A; 
+  @include opacity(.6); 
+  color:black; 
+
+}
+
+.collapsable h2:hover{
+  @include transparent; color:black;
+  background:resume(.9);
+  background:white;
+} 
+
 .close-btn {
   padding-top:.3em;
 
