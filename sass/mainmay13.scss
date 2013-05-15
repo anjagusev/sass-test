@@ -40,6 +40,7 @@ $luxury:url("../images/fake_luxury.png") repeat fixed 100% 0 transparent;
 $triangle: url("../images/gplaypattern.png") repeat fixed 100% 0 transparent;
 $diamond: url("../images/diamond_upholstery.png") repeat fixed 100% 0 transparent;
 $dots: url("../images/worn_dots.png") repeat fixed 100% 0 transparent;
+$eschD: url("../images/ESCHERESQUE_STE.png") repeat fixed 100% 0 transparent;
 
 
 /*header{
@@ -394,12 +395,12 @@ $colourr:none;
 }
 
 
- #triangle{
+ /*#triangle{
       margin:$centered;
    max-width:$page_width;
    height:auto;
    border:$border;
-  }
+  }*/
 
   
 
@@ -408,23 +409,31 @@ $colourr:none;
    ========================================================================== */
 
 svg{
-    width:auto;
-    height:auto;
+   
+    height:100%;
+    margin-top:1em;
+     @media screen and (max-width: 904px) {
+
+     } 
   }
 
    #testT{
-
-   height:425px;
+    float:none;
+    clear:both;
+top:10;
+margin-top:2em;
+ height: 100%; 
+  // height:825px;
    margin:$centered;
-   max-width:$page_width;
+   
 
   // height:300px;
   // background-image: url('../images/clearback.png');
       @media screen and (max-width: 904px) {
-     max-width:$page_width/1.2;
+   width:100%;
      }    
       @media screen and (max-width: $small_width) {
-     display:none;
+    width:100%
      }
   }
 
@@ -463,9 +472,9 @@ h1 {
    ========================================================================== */
 
 #about {
-background: url("../images/ESCHERESQUE_STE.png") repeat fixed 100% 0 transparent;
+background: $eschD;
 margin:$centered;
- min-height: 35em; 
+ min-height: 30em; 
  height:auto;
  padding-top:4.938em;
 
@@ -848,13 +857,13 @@ a:hover:after {
 
 .resume{
 width:100%;
-background: $shattered;
+background: $eschD;
 min-height:80em;
 display:inline-block;
 font-family:$sans;
 line-height: 1.625em;
 font-weight:400;
-color:#504A4B;//#8B91A0;
+color:$cream;//#8B91A0;
 font-size:.813em;
 
 }
@@ -862,9 +871,9 @@ font-size:.813em;
 .resumeContainer{
   width:90%;
   margin:$centered;
-  border:1px solid red;
 
 }
+
 
 
 #experience article { margin: 2.500em 3.750em; 
@@ -940,18 +949,43 @@ line-height:1.125em; }
    margin: 0 auto;
     padding: 0 10px;
     width: 58.75em;
+    max-height:1em;
+    font-family:$lato;
+    font-weight:100;
+    line-height:1.4em;
 }
 .collapsable { overflow: hidden; }
-.collapsable header { cursor: pointer; }
-.collapsable header:hover { background-color: #ffffff; }
+.collapsable header { 
+  :hover{
+    color:black;
+  }
+  font-size:2em;
+cursor: pointer; min-height:3em; 
+border:1px solid black;
+  vertical-align: baseline;
+h2{
+  float:left;
+  display:inline-block;
+  position:Relative;
+   padding-top:1em;
+
+
+} }
+.collapsable header:hover { background-color: #ffffff; color:black; }
 .close-btn {
-  float: right;
-  margin: 10px 0;
-  width: 40px;
-  height: 40px;
-  background: url(../img/close.png) no-repeat;
-  border: 0;
+  padding-top:.3em;
+
+  top:0;
+  float: left;
+  vertical-align: middle;
+  left:20;
+  display:inline-block;
+
+  :hover{
+    color:black;
+  }
 }
+
 
 .collapsable .close-btn:hover { background: url(../img/close-active.png) no-repeat; }
 

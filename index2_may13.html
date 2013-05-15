@@ -16,6 +16,7 @@
 <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
 <script src="jquery.js"></script><script src="js/raphael-min.js"></script>
 <!--<script src="js/triangles.js"></script>-->
+<script src="js/cross.js"></script>
 <!--[if IE]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <!--[if lte IE 7]>
@@ -50,8 +51,10 @@
 	<section id="intro">
 		<pre><h1>My name is <span id="name">Anja Gusev</span>
 		<span id="location">& I'm a Toronto based web developer.</span></h1></pre>
-	</section><!--/intro-->
 
+
+	</section><!--/intro-->
+<div id="testT" class="pages" data-type="background" data-speed="10"></div>	
 <div class="clearfloat"></div><!--/clearfloat-->
 <br/>
 <br/>
@@ -85,10 +88,6 @@
 <div class="clearfloat"></div><!--/clearfloat=-->
 	 
 <!--</div><!--end container-->
-
-<div id="testT" class="pages" data-type="background" data-speed="10"></div>
-
-
 <section id="about">
 	<div class="aboutContainer">
 		<section class="blurbContain">
@@ -133,39 +132,15 @@
 		</section><!--/blurbRight-->
 	</div><!--/aboutContain-->
 </section><!--/about-->
-<div class="clearfloat"></div>
-<section id="webWork">
-	<div class="webContainer">
-		<h2>Web Development Work</h2>
-		<section class="icons">
-			<div class="webIcon">
-				<a class="various" rel="gallery" data-fancybox-type="iframe" onmouseover="change('contactbutton','images/contact_over.gif');" 
- onmouseout="change('contactbutton','images/contact_box.gif');" href="http://fancyapps.com/fancybox/" ><img height="250" width="300" src="images/timmins3.png" name="timmins" alt=""/></a>
-			</div>  
-			<div class="webIcon">
-				<a class="various" rel="gallery" data-fancybox-type="iframe" href="http://fancyapps.com/fancybox/" ><img height="250" width="300" src="images/barterful2.png" name="barterful" alt=""/></a>
-			</div>
-			<div class="webIcon">
-				<a class="various" rel="gallery" data-fancybox-type="iframe" href="http://fancyapps.com/fancybox/" ><img name="lapapa" height="250" width="300" src="images/lapapa2.png" alt=""/></a>
-			</div>
-			<div class="webIcon">
-				<a class="various"  rel="gallery" dta-fancybox-type="iframe" href="http://fancyapps.com/fancybox/" ><img height="250" name="portfolio1" width="300" src="images/portfolioMockup.png" alt=""/></a>
-			</div>  
-			<div class="webIcon">
-				<a class="various" rel="gallery" data-fancybox-type="iframe" href="http://fancyapps.com/fancybox/" ><img height="250" name="portfolio2" width="300" src="images/portfolio2.png" alt=""/>
-				</a>
-			</div> 		
-		</section><!--/icons-->
-	</div><!--/webContainer-->
-</section><!--/webWork-->
+
 
 <section class="resume">
 	<div class="resumeContainer">
 		<section class="collapsable collapsed" id="experience" style="height: 40em;">
 			<header>
-				<div class="wrapper">
-					<button class="close-btn"></button>
-					<h2>Work Experience</h2>
+				<div class="wrapper"><i class="general foundicon-page close-btn" style="font-size:3em; color:black;"></i>
+					<h2>View My Resume 	</h2>
+
 				</div>
 			</header>
 			<div class="wrapper">
@@ -229,6 +204,33 @@
 
 	</div><!--/sectionContainer-->
 </section><!--/section-->
+
+<div class="clearfloat"></div>
+<section id="webWork">
+	<div class="webContainer">
+		<h2>Web Development Work</h2>
+		<section class="icons">
+			<div class="webIcon">
+				<a class="various" rel="gallery" data-fancybox-type="iframe" onmouseover="change('contactbutton','images/contact_over.gif');" 
+ onmouseout="change('contactbutton','images/contact_box.gif');" href="http://fancyapps.com/fancybox/" ><img height="250" width="300" src="images/timmins3.png" name="timmins" alt=""/></a>
+			</div>  
+			<div class="webIcon">
+				<a class="various" rel="gallery" data-fancybox-type="iframe" href="http://fancyapps.com/fancybox/" ><img height="250" width="300" src="images/barterful2.png" name="barterful" alt=""/></a>
+			</div>
+			<div class="webIcon">
+				<a class="various" rel="gallery" data-fancybox-type="iframe" href="http://fancyapps.com/fancybox/" ><img name="lapapa" height="250" width="300" src="images/lapapa2.png" alt=""/></a>
+			</div>
+			<div class="webIcon">
+				<a class="various"  rel="gallery" dta-fancybox-type="iframe" href="http://fancyapps.com/fancybox/" ><img height="250" name="portfolio1" width="300" src="images/portfolioMockup.png" alt=""/></a>
+			</div>  
+			<div class="webIcon">
+				<a class="various" rel="gallery" data-fancybox-type="iframe" href="http://fancyapps.com/fancybox/" ><img height="250" name="portfolio2" width="300" src="images/portfolio2.png" alt=""/>
+				</a>
+			</div> 		
+		</section><!--/icons-->
+	</div><!--/webContainer-->
+</section><!--/webWork-->
+
 <script type="text/javascript">
 $(document).ready(function() {
 	$(".various").fancybox({
@@ -247,7 +249,7 @@ $(document).ready(function() {
 });
 </script>
 <script src="js/plugin.js"></script>
-<div id="triangle"></div> 
+
 <footer><div class="social"> <i class="gen-enclosed foundicon-tools"></i>  <ul><li><i class="foundicon-facebook"></i><i class="foundicon-twitter"></i></li></ul></div></footer>
 </body>
 </html> 
