@@ -1613,24 +1613,30 @@ ul.features li span.icn:hover {
   text-shadow: none;
 }
 
-/* line 895, ../sass/mainmay13.scss */
+/* line 894, ../sass/mainmay13.scss */
+#experience {
+  height: 70em;
+  border: 1px solid white;
+}
+
+/* line 898, ../sass/mainmay13.scss */
 #experience h3 {
   letter-spacing: .098em;
   line-height: 1.125em;
 }
 
-/* line 897, ../sass/mainmay13.scss */
+/* line 900, ../sass/mainmay13.scss */
 #experience hgroup {
   margin: 0;
 }
 
-/* line 898, ../sass/mainmay13.scss */
+/* line 901, ../sass/mainmay13.scss */
 #experience .column-2 hgroup {
   margin: 0;
   line-height: 1.625em;
 }
 
-/* line 899, ../sass/mainmay13.scss */
+/* line 902, ../sass/mainmay13.scss */
 #experience h6 {
   font-weight: 700;
   text-transform: uppercase;
@@ -1638,26 +1644,26 @@ ul.features li span.icn:hover {
   letter-spacing: .034em;
 }
 
-/* line 900, ../sass/mainmay13.scss */
+/* line 903, ../sass/mainmay13.scss */
 #experience .column-1 {
   display: inline-block;
   width: 11.063em;
   vertical-align: top;
 }
-/* line 905, ../sass/mainmay13.scss */
+/* line 908, ../sass/mainmay13.scss */
 #experience .column-1 h6 {
   font-size: .846em;
   letter-spacing: .55px;
   line-height: 2em;
 }
-/* line 910, ../sass/mainmay13.scss */
+/* line 913, ../sass/mainmay13.scss */
 #experience .column-1 h3 {
   font-size: 1em;
   line-height: 1.385em;
   letter-spacing: .121em;
 }
 
-/* line 917, ../sass/mainmay13.scss */
+/* line 920, ../sass/mainmay13.scss */
 #experience .column-2 {
   display: inline-block;
   line-height: 1.625em;
@@ -1665,7 +1671,7 @@ ul.features li span.icn:hover {
   vertical-align: top;
   width: 36.250em;
 }
-/* line 923, ../sass/mainmay13.scss */
+/* line 926, ../sass/mainmay13.scss */
 #experience .column-2 a {
   font-size: .563em;
   letter-spacing: .188em;
@@ -1676,25 +1682,25 @@ ul.features li span.icn:hover {
   height: .875em;
   float: right;
 }
-/* line 934, ../sass/mainmay13.scss */
+/* line 937, ../sass/mainmay13.scss */
 #experience .column-2 p {
   margin: .813em 0;
   width: 36.250em;
   line-height: 2em;
 }
-/* line 939, ../sass/mainmay13.scss */
+/* line 942, ../sass/mainmay13.scss */
 #experience .column-2 h3 {
   line-height: 1.385em;
   letter-spacing: .120em;
 }
-/* line 943, ../sass/mainmay13.scss */
+/* line 946, ../sass/mainmay13.scss */
 #experience .column-2 h6 {
   font-size: .846em;
   letter-spacing: .55px;
   line-height: 2em;
 }
 
-/* line 949, ../sass/mainmay13.scss */
+/* line 952, ../sass/mainmay13.scss */
 .wrapper {
   margin: 0 auto;
   padding: 0 10px;
@@ -1704,13 +1710,19 @@ ul.features li span.icn:hover {
   font-weight: 100;
   line-height: 1.4em;
 }
+/* line 960, ../sass/mainmay13.scss */
+.wrapper .resumeHeader {
+  font-size: 2em;
+  padding-top: 1em;
+  position: relative;
+}
 
-/* line 958, ../sass/mainmay13.scss */
+/* line 966, ../sass/mainmay13.scss */
 .collapsable {
   overflow: hidden;
 }
 
-/* line 959, ../sass/mainmay13.scss */
+/* line 967, ../sass/mainmay13.scss */
 .collapsable header {
   font-size: 2em;
   cursor: pointer;
@@ -1718,11 +1730,11 @@ ul.features li span.icn:hover {
   border: 1px solid black;
   vertical-align: baseline;
 }
-/* line 960, ../sass/mainmay13.scss */
+/* line 968, ../sass/mainmay13.scss */
 .collapsable header :hover {
   color: black;
 }
-/* line 967, ../sass/mainmay13.scss */
+/* line 976, ../sass/mainmay13.scss */
 .collapsable header h2 {
   float: left;
   display: inline-block;
@@ -1730,7 +1742,7 @@ ul.features li span.icn:hover {
   padding-top: 1em;
 }
 
-/* line 980, ../sass/mainmay13.scss */
+/* line 989, ../sass/mainmay13.scss */
 .collapsable header:hover {
   background-color: #84939A;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
@@ -1738,7 +1750,7 @@ ul.features li span.icn:hover {
   color: black;
 }
 
-/* line 987, ../sass/mainmay13.scss */
+/* line 996, ../sass/mainmay13.scss */
 .collapsable h2:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
@@ -1747,7 +1759,7 @@ ul.features li span.icn:hover {
   background: white;
 }
 
-/* line 993, ../sass/mainmay13.scss */
+/* line 1002, ../sass/mainmay13.scss */
 .close-btn {
   padding-top: .3em;
   top: 0;
@@ -1756,12 +1768,12 @@ ul.features li span.icn:hover {
   left: 20;
   display: inline-block;
 }
-/* line 1002, ../sass/mainmay13.scss */
+/* line 1011, ../sass/mainmay13.scss */
 .close-btn :hover {
   color: black;
 }
 
-/* line 1008, ../sass/mainmay13.scss */
+/* line 1017, ../sass/mainmay13.scss */
 .collapsable .close-btn:hover {
   background: url(../img/close-active.png) no-repeat;
 }
@@ -1769,7 +1781,7 @@ ul.features li span.icn:hover {
 /* ==========================================================================
    Footer
    ========================================================================== */
-/* line 1017, ../sass/mainmay13.scss */
+/* line 1026, ../sass/mainmay13.scss */
 footer {
   border: none;
   margin: 0 auto;
@@ -1778,13 +1790,13 @@ footer {
   max-width: 80em;
 }
 @media screen and (max-width: 620px), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  /* line 1017, ../sass/mainmay13.scss */
+  /* line 1026, ../sass/mainmay13.scss */
   footer {
     width: auto;
   }
 }
 
-/* line 1031, ../sass/mainmay13.scss */
+/* line 1040, ../sass/mainmay13.scss */
 #footer #ul {
   list-style: none;
   display: inline;
@@ -1793,7 +1805,7 @@ footer {
 /* ==========================================================================
    Circle Effect 
    ========================================================================== */
-/* line 1042, ../sass/mainmay13.scss */
+/* line 1051, ../sass/mainmay13.scss */
 .ch-grid {
   margin: 0px 0 0 0;
   padding: 0;
@@ -1805,19 +1817,19 @@ footer {
   float: left;
 }
 
-/* line 1055, ../sass/mainmay13.scss */
+/* line 1064, ../sass/mainmay13.scss */
 .ch-grid:after,
 .ch-item:before {
   content: '';
   display: table;
 }
 
-/* line 1060, ../sass/mainmay13.scss */
+/* line 1069, ../sass/mainmay13.scss */
 .ch-grid:after {
   clear: both;
 }
 
-/* line 1064, ../sass/mainmay13.scss */
+/* line 1073, ../sass/mainmay13.scss */
 .ch-grid li {
   font-size: 14px;
   width: 13.714em;
@@ -1826,7 +1838,7 @@ footer {
   margin: 0px;
 }
 
-/* line 1071, ../sass/mainmay13.scss */
+/* line 1080, ../sass/mainmay13.scss */
 ch-item {
   border-radius: 50%;
   overflow: hidden;
@@ -1836,23 +1848,23 @@ ch-item {
   transition: all 0.4s ease-in-out;
 }
 
-/* line 1083, ../sass/mainmay13.scss */
+/* line 1092, ../sass/mainmay13.scss */
 .ch-img-1 {
   background-image: url("../images/invert.png");
   background-size: 100%;
 }
 
-/* line 1087, ../sass/mainmay13.scss */
+/* line 1096, ../sass/mainmay13.scss */
 .ch-img-2 {
   background-image: url("../images/2.jpg");
 }
 
-/* line 1090, ../sass/mainmay13.scss */
+/* line 1099, ../sass/mainmay13.scss */
 .ch-img-3 {
   background-image: url("../images/3.jpg");
 }
 
-/* line 1095, ../sass/mainmay13.scss */
+/* line 1104, ../sass/mainmay13.scss */
 .ch-item {
   width: 100%;
   height: 100%;
@@ -1863,7 +1875,7 @@ ch-item {
   transition: all 0.4s ease-in-out;
 }
 
-/* line 1109, ../sass/mainmay13.scss */
+/* line 1118, ../sass/mainmay13.scss */
 .ch-info {
   position: absolute;
   width: 100%;
@@ -1876,7 +1888,7 @@ ch-item {
   backface-visibility: hidden;
 }
 
-/* line 1121, ../sass/mainmay13.scss */
+/* line 1130, ../sass/mainmay13.scss */
 .ch-info h3 {
   color: #fff;
   text-transform: uppercase;
@@ -1890,7 +1902,7 @@ ch-item {
   text-shadow: 0 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* line 1136, ../sass/mainmay13.scss */
+/* line 1145, ../sass/mainmay13.scss */
 .ch-info p {
   color: #fff;
   font-style: italic;
@@ -1899,7 +1911,7 @@ ch-item {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-/* line 1144, ../sass/mainmay13.scss */
+/* line 1153, ../sass/mainmay13.scss */
 .ch-info p a {
   display: block;
   color: rgba(255, 255, 255, 0.7);
@@ -1911,17 +1923,17 @@ ch-item {
   font-family: 'Open Sans', Arial, sans-serif;
 }
 
-/* line 1155, ../sass/mainmay13.scss */
+/* line 1164, ../sass/mainmay13.scss */
 .ch-info p a:hover {
   color: rgba(255, 242, 34, 0.8);
 }
 
-/* line 1159, ../sass/mainmay13.scss */
+/* line 1168, ../sass/mainmay13.scss */
 .ch-item:hover {
   box-shadow: inset 0 0 0 110px #ffe0d7, inset 0 0 0 16px rgba(255, 255, 255, 0.8), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* line 1166, ../sass/mainmay13.scss */
+/* line 1175, ../sass/mainmay13.scss */
 .ch-item:hover .ch-info {
   opacity: 1;
   transform: scale(1);

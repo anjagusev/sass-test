@@ -891,7 +891,10 @@ font-size:.813em;
 }
 
 }
-
+#experience{
+height:70em;
+  border:1px solid white;
+}
 #experience h3 { letter-spacing:.098em;
 line-height:1.125em; }
 #experience hgroup { margin: 0; }
@@ -954,6 +957,11 @@ line-height:1.125em; }
     font-family:$lato;
     font-weight:100;
     line-height:1.4em;
+    .resumeHeader{
+      font-size:2em;
+    padding-top:1em;
+      position:relative;
+    }
 }
 .collapsable { overflow: hidden; }
 .collapsable header { 
@@ -961,7 +969,8 @@ line-height:1.125em; }
     color:black;
   }
   font-size:2em;
-cursor: pointer; min-height:3em; 
+cursor: pointer; 
+min-height:3em; 
 border:1px solid black;
   vertical-align: baseline;
 h2{
