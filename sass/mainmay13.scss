@@ -893,7 +893,6 @@ font-size:.813em;
 }
 #experience{
 height:70em;
-  border:1px solid white;
 }
 #experience h3 { letter-spacing:.098em;
 line-height:1.125em; }
@@ -965,13 +964,13 @@ line-height:1.125em; }
 }
 .collapsable { overflow: hidden; }
 .collapsable header { 
+  border:none;
   :hover{
     color:black;
   }
   font-size:2em;
 cursor: pointer; 
 min-height:3em; 
-border:1px solid black;
   vertical-align: baseline;
 h2{
   float:left;

@@ -22,7 +22,7 @@ svg.removeAttribute("height");
   var y = r.path("M 910 424 L374 424 L638 0 z");
 path.attr({fill: 'white'});
 path3.attr({fill: 'black'});
-pathy.attr({fill:'green'});
+pathy.attr({fill:'green', stroke:'none'});
 y.attr({fill:'url("apple.png")'});
 
 r.print(300, 100, "Test string", r.getFont("Times", 800), 30);
