@@ -2,6 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,400,300);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800);
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
 @import "../sass/cross_browser_opacity.scss";
 @import "../sass/general_enclosed_foundicons.scss";
 @import "../sass/general_foundicons.scss";
@@ -9,7 +10,6 @@
 @import "../sass/fonts.scss";
 @import "../sass/fonts.scss";
 @import "compass/css3";
-  
 
 
 $small_width: 620px;
@@ -44,7 +44,7 @@ $triangle: url("../images/gplaypattern.png") repeat fixed 100% 0 transparent;
 $diamond: url("../images/diamond_upholstery.png") repeat fixed 100% 0 transparent;
 $dots: url("../images/worn_dots.png") repeat fixed 100% 0 transparent;
 $eschD: url("../images/ESCHERESQUE_STE.png") repeat fixed 100% 0 transparent;
-
+$Noto: 'Noto Sans', sans-serif;
 
 /*header{
 
@@ -755,8 +755,7 @@ ul.features{ position: relative; }
 
 #webWork {
  // background: url("../images/debut_light.png") repeat fixed 60% 0 transparent;
-  background-color:#fff;
-  opacity:60;
+
 margin:$centered;
  min-height: 50em; 
  padding-top:4.938em;
@@ -790,36 +789,33 @@ width:90%;
   padding-left:1em;
   padding-bottom:1.4em;
  }
-
- 
-
 }
 
 .icons {
-  width:100%;
+  width:80%;
   margin:0 auto;
 
  a{
   position:relative;
   display:block;
   height:relative;
-  height:18.625em;
+  height:20.625em;
  } 
 
 
  a:hover:after {
   content: url("../images/hover3.png");
-    height: 18.625em;
+    height: 16.625em;
     left: 0;
     position: absolute;
-    width: 18.750em;
+    width: 22.750em;
     opacity:10;
 }
 img{
-border:1px solid black;
+  padding:1em;
 //border-radius: 50%;
-//width: 18.750em;
-height: 18.750em;
+width: 18.250em;
+height: 16.750em;
 }
 }
 
@@ -865,9 +861,9 @@ a:hover:after {
   margin-top:2em;
   background:none;
 width:100%;
-min-height:80em;
+min-height:10em;
 display:inline-block;
-font-family:$sans;
+font-family:$Noto;
 line-height: 1.625em;
 font-weight:400;
 color:black;//#8B91A0;
@@ -942,7 +938,7 @@ line-height:1.125em; }
     p {
       margin:.813em 0;
       width:36.250em;
-      line-height:2em;
+      line-height:1.6em;
     }
     h3{
       line-height:1.385em;
@@ -959,7 +955,7 @@ line-height:1.125em; }
     padding: 0 10px;
     width: 58.75em;
     max-height:1em;
-    font-family:$lato;
+    font-family:$Noto;
     font-weight:300;
     line-height:1.4em;
     letter-spacing:.04em;
@@ -969,18 +965,18 @@ line-height:1.125em; }
       position:relative;
     }
 }
-.collapsable { overflow: hidden; }
+.collapsable { overflow: hidden; height:40em;  }
 .collapsable header { 
+  padding-top:1em;
   border:none;
   :hover{
     color:black;
   }
   font-size:2em;
 cursor: pointer; 
-min-height:3em; 
+min-height:2em; 
   vertical-align: baseline;
 h2{
-  float:left;
   display:inline-block;
   position:Relative;
    padding-top:0em;
@@ -1007,7 +1003,6 @@ h2{
 
 .close-btn {
   top:0;
-  float: left;
   vertical-align: middle;
   left:20;
   display:inline-block;
