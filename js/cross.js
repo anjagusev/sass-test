@@ -18,7 +18,7 @@ svg.removeAttribute("width");
 svg.removeAttribute("height");
 
 
-   // var x = r.path("M 0 0 L460 225 L920 0 z");
+   var x = r.path("M 0 0 L460 225 L920 0 z");
     
   var y = r.path("M 920 450 L460 225 L920 0 z");
     var z = r.path("M 0 0 L460 225 L 0 450 z");

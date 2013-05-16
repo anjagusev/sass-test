@@ -5,6 +5,8 @@
 @import "../sass/cross_browser_opacity.scss";
 @import "../sass/general_enclosed_foundicons.scss";
 @import "../sass/general_foundicons.scss";
+@import "../sass/social_foundicons.scss";
+@import "../sass/fonts.scss";
 @import "../sass/fonts.scss";
 @import "compass/css3";
   
@@ -410,9 +412,11 @@ $colourr:none;
    ========================================================================== */
 
 svg{
-   
-    height:100%;
-    margin-top:1em;
+   margin:$centered;   
+    width:50%;
+    height:50%;
+    margin-left:20%;
+    padding-bottom:0;
      @media screen and (max-width: 904px) {
 
      } 
@@ -422,8 +426,9 @@ svg{
     float:none;
     clear:both;
 top:10;
-margin-top:-2em;
+margin-top:2em;
  height: 100%; 
+ width:100%;
   // height:825px;
    margin:$centered;
    
@@ -857,14 +862,15 @@ a:hover:after {
    ========================================================================== */
 
 .resume{
+  margin-top:2em;
+  background:none;
 width:100%;
-background: $eschD;
 min-height:80em;
 display:inline-block;
 font-family:$sans;
 line-height: 1.625em;
 font-weight:400;
-color:$cream;//#8B91A0;
+color:black;//#8B91A0;
 font-size:.813em;
 
 }
@@ -954,8 +960,9 @@ line-height:1.125em; }
     width: 58.75em;
     max-height:1em;
     font-family:$lato;
-    font-weight:100;
+    font-weight:300;
     line-height:1.4em;
+    letter-spacing:.04em;
     .resumeHeader{
       font-size:2em;
     padding-top:1em;
@@ -976,7 +983,7 @@ h2{
   float:left;
   display:inline-block;
   position:Relative;
-   padding-top:1em;
+   padding-top:0em;
 
 
 } }
@@ -999,8 +1006,6 @@ h2{
 } 
 
 .close-btn {
-  padding-top:.3em;
-
   top:0;
   float: left;
   vertical-align: middle;
