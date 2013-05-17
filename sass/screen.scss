@@ -43,6 +43,7 @@ $diamond: url("../images/diamond_upholstery.png") repeat fixed 100% 0 transparen
 $dots: url("../images/worn_dots.png") repeat fixed 100% 0 transparent;
 $eschD: url("../images/ESCHERESQUE_STE.png") repeat fixed 100% 0 transparent;
 $Noto: 'Noto Sans', sans-serif;
+$opacity: url("../images/opacity.png") repeat fixed 100% 0 transparent;
 
 /*header{
 
@@ -53,31 +54,33 @@ $Noto: 'Noto Sans', sans-serif;
     width: 100%;
     z-index: 10;
 }*/
+
 body {
-	background: $back_colour;
-	border: $border;
-	font-family: $lato;
+ 
+  font-family: $lato;
   font-size:16px;
   @media screen and (max-width: $small_width), only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
     width:100%;
     margin:$centered;
- }
-	background: $cube;
-	#container{ 
-	max-width:$page_width;
+  }
+  background: $cube;
+}
+
+/* #container{ 
+  max-width:$page_width;
   margin:$centered;
   margin-top:.5em;
   min-height:50em;
-  @media screen and (max-width: $small_width), only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+ @media screen and (max-width: $small_width), only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
     max-width:100%;
     margin:$centered;
-  }
-}
+  } */
 
 .clearfloat
 {
   float:none;
   clear:both;
+  borner:none;
 }
 
 
@@ -154,7 +157,6 @@ a{
 margin:$centered;
 margin-top:.5em;
 max-width:$page_width;
-
 }
 
 #location
@@ -395,16 +397,65 @@ border:1px solid black;
   @include page_tab($colourr); 
   } 
 }
+canvas {
+    cursor:pointer;
+    display: block;
+    float: left;
+    margin: 0;
+    position: relative;
+    color: black;
+    svg {
+      background-color:black;
+    }
+
+}
 
 
- /*#triangle{
-      margin:$centered;
-   max-width:$page_width;
-   height:auto;
-   border:$border;
-  }*/
+ /*#canvas1{
+   border:1px solid black;
+   float:none;
 
-  
+width:30%;
+height:30%;
+   clear:both;
+  padding:0;
+  margin:0;
+  svg {
+    border:1px solid pink;
+    margin:0;
+
+     
+  }
+  }
+/*
+canvas {
+    cursor:pointer;
+    display: block;
+    float: left;
+    margin: 0;
+    position: relative;
+    color: #2E2C2A;
+
+}
+
+ .triangle{
+   border:1px solid black;
+   float:none;
+
+width:30%;
+height:30%;
+   clear:both;
+  padding:0;
+  margin:0;
+  svg {
+    border:1px solid pink;
+    margin:0;
+
+     
+  }
+  }
+
+  */
 
 /* ==========================================================================
    SVG Graphic
@@ -473,16 +524,19 @@ svg{
   background: $eschD;
   margin:$centered;
   min-height: 30em; 
-  height:auto;
   padding-top:4.938em;
-  @media screen and (max-width: 850px){
-    height:50em;
+/*  @media screen and (max-width: 850px){
+ min-height:100em;
   }
   @media screen and (max-width: 780px){
     font-size:.9em;
-  }
-  @media screen and (max-width: 580px){
-    min-height:90em;
+    min-height:150em;
+    #webContainer{
+      margin-top:40em;
+    }
+  }*/
+  @media screen and (max-width: 660px){
+  min-height: 50em; 
   }
 }
 
@@ -713,16 +767,16 @@ ul.features li span.icn:hover{
 
 .container {
   width:3%;
-  border:1px solid red;
   margin:0 auto;
   padding-top:3em;
+  float:none;
 }
 
 .down
 {
   color:white;
   font-size:3em;
-  padding-top:3em;
+  padding-top:5em;
   width:3%;
   margin:0 auto;
   position:relative;
@@ -731,17 +785,93 @@ ul.features li span.icn:hover{
 /* ==========================================================================
    Web Work Container
    ========================================================================== */
+$grey: #313131;;
+#webContainer{
+  background: $opacity;
+    width:100%;
+}
 
+#webDisplay{
+  font-family:$lato;
+  font-weight:300;
+  padding-top:3em;
+  margin:0 auto;
+  width:85%;
+  text-align:center;
+  color:$grey;
+  h2{
+    text-align:left;
+    padding-bottom:.2em;
+    border-bottom:1px solid $grey;
+  }
+  img {
+    border:3px dotted $grey;
+    float:left;
+    margin:1em;
+     -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  }
+ 
+  a:hover:after {
+
+    content: url("../images/hover.png");
+    left: 0;
+    position: absolute;
+    opacity:10;
+  }
+  h2{
+    font-size:2em;
+  }
+  @media screen and (max-width: 580px){
+   img {
+    margin:0 auto;
+    text-align:center;
+    border:1px solid pink;
+   }
+  }
+   @media screen and (max-width: 520px){
+   img {
+    margin:0;
+    width:90%;
+    padding:0;
+    padding-bottom:.5em;
+    text-align:center;
+    border:1px solid green;
+   }
+  }
+}
+/*
 #webWork {
+  min-width:40em;
+  min-height:60em;
    margin:$centered;
-   min-height: 50em; 
+    text-align:center;
    padding-top:4.938em;
    line-height:2em;
-   position:relative;
+   position:static;
    padding-right:0;
    padding-left:0;
    display:block;
    color:#504A4B;
+   margin-top:4em;
+  //border:1px solid red;
+   @media screen and (max-width: 780px){
+    width:auto;
+    height:80em;
+    margin:0;
+    padding:0;
+  }
+  @media screen and (max-width: 680px){
+    width:auto;
+    padding:0;
+    margin:0;
+    min-height:120em;
+
+  }
+  @media screen and (max-width: 600px){
+  width:auto;  
+  }
 }
 
 
@@ -751,26 +881,63 @@ ul.features li span.icn:hover{
   padding-right:1em;
   padding-left:1em;
   padding-bottom:1.4em;
-  @media screen and (max-width: 600px){
-    width:auto;
+  margin-top:0;
+  margin-bottom:0;
+  padding-bottom:0;
+  padding-top:0;
+  text-align:center;
+
+   @media screen and (max-width: 780px){
+    float:none;
+    max-width:50%;
     padding:0;
     margin:0;
+ }
+
+   @media screen and (max-width: 680px){
+    float:none;
+    border:2px dotted green;
+    max-width:50%;
+ }
+
+  @media screen and (max-width: 600px){
+  width:auto;
   }
 }
 
 
 .icons {
+  width:85%;
+  margin:0 auto;
+  min-height:40em;
+text-align:center;
+ @media screen and (max-width: 940px){
+  min-height:80em;
   width:80%;
   margin:0 auto;
-
+ }
+  @media screen and (max-width: 860px){
+  width:90%;
+  height:auto;
+  margin:0 auto;
+  text-align:center;
+ }
+  @media screen and (max-width: 680px){
+    float:none;
+    min-height:80em;
+    margin:0 auto;
+    width:90%;
+    height:auto;
+ }
+  @media screen and (max-width: 600px){
+  width:auto;
+  height:auto;
+ }
  a{
   position:relative;
   display:block;
-  height:relative;
-  height:18.625em;
+  min-height:18.625em;
  } 
-
-
  a:hover:after {
   content: url("../images/hover.png");
     height: 16.625em;
@@ -779,21 +946,9 @@ ul.features li span.icn:hover{
     width: 18.750em;
     opacity:10;
 }
-img{
-  padding:1em;
-//border-radius: 50%;
-width: 18.250em;
-height: 16.750em;
-@media screen and (max-width: 600px){
-width:auto;
-padding:0;
-margin:0;
- }
-}
 
    @media screen and (max-width: 600px){
-width:30%;
-padding:0;
+width:auto;
 margin:0;
  }
 
@@ -839,23 +994,39 @@ a:hover:after {
 
 .resume{
   margin-top:2em;
+ // margin-left:auto;
+  //margin-right:auto;
   background:$eschD;
-width:100%;
-min-height:10em;
-display:inline-block;
-font-family:$Noto;
-line-height: 1.625em;
-font-weight:400;
-color:black;//#8B91A0;
-font-size:.813em;
-@media screen and (max-width: 600px){
-display:block;
+  width:100%;
+  position:static;
+  min-height:10em;
+  display:inline-block;
+  font-family:$Noto;
+  line-height: 1.625em;
+  font-weight:400;
+  color:black;//#8B91A0;
+  font-size:.813em;
+  @media screen and (max-width: 600px){
+    display:block;
+  }
 }
 
+#resume {
+
+  background: $esch;
 }
 
+#resumeSection{
+  background:$eschD;
+  padding-bottom:2em;
+}
+
+.resumePage{
+  float:none;
+  margin:0 auto;
+}
 .resumeContainer{
-  width:90%;
+  width:55%;
   margin:$centered;
   h6{
 
@@ -869,8 +1040,14 @@ display:block;
   .column-1 {
 
   }
+@media screen and (max-width: 800px){
+width:100%;
+height:auto;
+padding:0;
+margin:0;
+}
   @media screen and (max-width: 600px){
-width:auto;
+width:100%;
 padding:0;
 margin:0;
 }
@@ -894,14 +1071,59 @@ margin:0;
 
 }
 
+.resume-btn {
+  font-family:$lato;
+  vertical-align: baseline;
+  width:20em;
+  margin:0 auto;
+  min-height:3em;
+  h2{
+    float:left;
+    padding-right:.5em;
+  }
+  i {
+    float:left;
+    font-size:2.5em;
+    font-weight:100;
+    padding-left:.4em;
+  }
+}
+.resumeContainer {
 
-#experience{
-background: $esch;
-height:80em;
-  @media screen and (max-width: 600px){
-  display:block;
+  header{
+    font-family:$lato;
+    height:3em;
+    vertical-align: baseline;
+    color:white;
+    padding-top:.3em;
+    h2{
+       font-family:$lato;
+       font-weight:100;
+      padding:0;
+      margin:0;
+    }
+    i {
+    
+    }
+  }
+  header:hover { 
+    background:$esch; 
+    color:black; 
+  }
+
+
 }
 
+.resumeContainer{
+
+//height:100em;
+/*  @media screen and (max-width: 600px){
+  
+}*/
+h2{ 
+        font-size:2em;
+        padding-top:1em;
+  }
   .column-1 {
     display: inline-block;
     width: 11.063em;
@@ -962,15 +1184,17 @@ height:80em;
     letter-spacing: .55px;
     line-height:2em;
     }
+
   }
+}
 
-
+/*
   .wrapper{
     margin: 0 auto;
     padding: 0 10px;
     width:100%;
     //width: 58.75em;
-    max-height:1em;
+    //max-height:1em;
     font-family:$Noto;
     font-weight:300;
     line-height:1.4em;
@@ -978,9 +1202,15 @@ height:80em;
       .resumeHeader{
         font-size:2em;
         padding-top:1em;
-        position:relative;
+        position:static;
       }
-  }
+    min-height:30em;
+    float:none;
+     @media screen and (max-width: 600px){
+  max-height:140em;
+border:3px solid purple;
+}
+    }
 
 }
 
@@ -988,9 +1218,11 @@ height:80em;
 .resume-btn{
   padding:0;
 }
+
+
 .collapsable { 
-  overflow: hidden; 
-  height:60em;  
+overflow: hidden; 
+height:80em;
   header { 
     background:$eschD;
     color:white;
@@ -1010,6 +1242,8 @@ height:80em;
       font-family:$lato;
       text-align:center;
       margin:0 auto;
+      font-size:2em;
+        padding-top:1em;
     } 
     i{
       margin-left:.5em;
@@ -1030,9 +1264,17 @@ height:80em;
   .close-btn:hover{
     background: url(../img/close-active.png) no-repeat; 
   }
-}
+}*/
+
+.collapsable collapsed {
+max-height:3em;
+
+
 }
 
+#resume {
+  display:none;
+}
 
 .close-btn {
   top:0;
@@ -1046,6 +1288,27 @@ height:80em;
 
 
 
+/* ==========================================================================
+   Contact Container
+   ========================================================================== */
+#contact{
+   background:$opacity;
+  width:100%;
+  min-height:10em;
+
+}
+
+#contactContainer{
+
+  font-family:$lato;
+  font-weight:300;
+  padding-top:3em;
+  margin:0 auto;
+  width:85%;
+  text-align:center;
+}
+
+
 
 /* ==========================================================================
    Footer
@@ -1053,21 +1316,42 @@ height:80em;
 
 
 footer{
-  border:$border;
-  margin:$centered;
-  height:5em;
-     margin:$centered;
-   max-width:$page_width;
-//  background:rgba(000, 000, 255, 0.1);
-@media screen and (max-width: $small_width), only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-  width:auto;
-  }
+  color:black;
+  background:$cream;
+  border:none;
+  width:100%;
+  min-height:5em;
+  text-decoration:none;
+  font-family:$sans;
+  font-size:.8em;
+  text-align:center;
+}
+#footerContainer {
+  padding:1em;
+  border:1px dotted blue;
 }
 
+.footerLeft {
+  border:1px solid red;
+  min-height:3%;
+  width:40%;
+  text-align:left;
+  float:left;
+  ul li {
+    font-size:3em;
+    display:inline;
+  }
+}
+.footerRight{
+  border:1px sold pink;
+  width:40%;
+  min-height:3%;
+  float:left;
+  text-align:left;
+}
 #footer #ul {
-  list-style: none;
-  display:inline;
+ 
+
 }
     
 /* ==========================================================================

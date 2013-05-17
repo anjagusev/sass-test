@@ -1,0 +1,64 @@
+$(window).resize(function() {
+	if(($(window).width()) < 600)) and (('#experience').hasClass('collapsed')){
+    $('#about').css('height', '80em');
+});
+
+
+
+	$('.collapsable').each(function(){
+			var eHeight = $(this).outerHeight(true);
+			var dHeight = $(document).height();
+			var wHeight = window.innerHeight || $(window).height(); 
+			
+			$(this).data('fullHeight', eHeight);
+			//checks if the section has the class collapsed
+			var section = $(this).parent();
+			if(!section.hasClass('collapsed'))
+{
+		//if the window is less than 600 px and collapsed isn't appended make these changes
+		if(($(window).width()) < 780){
+			$('.collapsable').css({
+				'height': '140em'
+				
+		});
+
+/*			$(window).resize(function() {
+    $('.resume').height($(window).height());
+});
+
+$(window).trigger('resize');
+*/
+						//$('#webWork').css('margin-top', '60em');
+
+		};
+}
+			if(dHeight - eHeight > wHeight){
+				$(this)
+					.css('height', $(this).children('header').outerHeight(true))
+					.addClass('collapsed');
+			}
+		});
+	
+		$('.collapsable header').click(function(){
+			var section = $(this).parent();
+			if(section.hasClass('collapsed')){
+				section.animate({
+					'height': section.data('fullHeight')
+				}, 'slow', 'easeInOutCubic')
+					.removeClass('collapsed')
+					.find('canvas').each(function(){
+						$(this).data('animation').restart()
+					});
+			/*	$('#webWork').css({
+					'position': 'fixed'
+
+				});	*/
+				PXC.smoothScrollTo($(this));
+			}else{
+				section.animate({
+						'height': $(this).outerHeight(true)
+					}, 'normal', 'easeInOutCubic')
+						.addClass('collapsed');
+			}
+		});
+		

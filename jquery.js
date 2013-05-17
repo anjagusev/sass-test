@@ -8,6 +8,18 @@ var top = $('html').offset().top;
 	'top':top
 });*/
 
+/*$('.resume-btn').click(function(e){
+		alert('hide!');
+	if(('#experience').hasClass('collapsed'))
+		{
+			$('#resume').toggle();
+			alert('hide!');
+		}
+	});*/
+$('.resume-btn').click(function(e){
+$('#resume').toggle();
+
+});
 
 
 $('.menu').click(function(e){ 
@@ -203,63 +215,6 @@ var wWidth = $(window).width() || window.innerWidth;
 	}
 	});*/
 
-
-
-
-	$('.collapsable').each(function(){
-			var eHeight = $(this).outerHeight(true);
-			var dHeight = $(document).height();
-			var wHeight = window.innerHeight || $(window).height(); 
-			
-			$(this).data('fullHeight', eHeight);
-			//checks if the section has the class collapsed
-			var section = $(this).parent();
-			
-			if(!section.hasClass('collapsed'))
-{
-		//if the window is less than 600 px and collapsed isn't appended make these changes
-		if(($(window).width()) < 600){
-			$('.resume').css({
-				'height': '80em',
-				'border': '3px solid red',
-				'display': 'block',
-				'float': 'none',
-				'clear': 'both',
-				'background-color': 'red',
-				'width': 'auto'
-
-		});
-						$('#webWork').css('margin-top', '60em');
-
-		};
-}
-			if(dHeight - eHeight > wHeight){
-				$(this)
-					.css('height', $(this).children('header').outerHeight(true))
-					.addClass('collapsed');
-			}
-		});
-	
-		$('.collapsable header').click(function(){
-			var section = $(this).parent();
-			if(section.hasClass('collapsed')){
-				section.animate({
-					'height': section.data('fullHeight')
-				}, 'slow', 'easeInOutCubic')
-					.removeClass('collapsed')
-					.find('canvas').each(function(){
-						$(this).data('animation').restart()
-					});
-					
-				PXC.smoothScrollTo($(this));
-			}else{
-				section.animate({
-						'height': $(this).outerHeight(true)
-					}, 'normal', 'easeInOutCubic')
-						.addClass('collapsed');
-			}
-		});
-		
 
 
 	
