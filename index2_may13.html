@@ -2,15 +2,16 @@
 <html>
 <head>
 <title>Anja Gusev - Web Developer</title>
-<link rel="stylesheet" href="stylesheets/mainmay13.css">
- 
+<!--<link rel="stylesheet" href="stylesheets/mainmay13.css">-->
+<link rel="stylesheet" href="stylesheets/screen.css">
+ <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <!--<script src="js/prefixfree.min.js"></script>-->
 
 
 <!-- Add mousewheel plugin (this is optional) -->
 <script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
-
+<script src="js/plugin.js"></script>
 <!-- Add fancyBox -->
 <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
 <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
@@ -27,15 +28,15 @@
 </head>
 
 <body>
-	<div class="trigger" style="display: block; border:0px;">
+	<!--<div class="trigger" style="display: block; border:0px;">
 <a class="scroll hideclick" style="border:0px;" href="#top">
-<i class="general foundicon-up-arrow" style="color:white; border:0px;"></i>
+<i class="icon-arrow" style="color:white; border:0px;"></i>
 </a>
-</div>
+</div>-->
 	<!--<header>PERMAMENT HEADER</header>-->
 	<!--<div id="container">-->
 		<section id="home" data-type="background" class="pages" data-speed="10">
-	<nav> <a href="#contact"> contact </a> <a href="#work"> work </a> </nav><!--/nav-->
+	<!--<nav> <a href="#contact"> contact </a> <a href="#work"> work </a> </nav>--/nav-->
 
 	<ul class="ch-grid">
 	    <li>
@@ -56,19 +57,23 @@
 <div id="testT" class="pages" data-type="background" data-speed="10"></div>	
 <div class="clearfloat"></div><!--/clearfloat-->
 
+<nav id="menuContainer"> 
+	<i class="icon-plus menu"></i>
+<!--<i class="general foundicon-plus menu" style="font-size:1em; color:black;"></i>-->
 <article id="selection">
-	<a href="#"><div class="cubecream"></div> </a>
+	<div class="cube cubecream"></div>
 	<!--<div class="empty"> </div> -->
-	 <a href="#"><div class="cubepalepink"> who am i? </div></a>
+	 <a href="#"><div class="cube cubepalepink"> who am i? </div></a>
 	<!--<div class="empty"> </div> -->
 	<a href="#"><div class="cube"> web development </div> </a>
 	<!--<div class="empty"> </div> -->
-	<a href="#"><div class="cubepurple"> videography</div> </a>
+	<a href="#"><div class="cube cubepurple"> videography</div> </a>
 	<!--<div class="empty"> </div> -->
-	<a href="#"><div class="cubepink"> fun </div></a>
+	<a href="#"><div class="cube cubepink"> fun </div></a>
 	<!--<div class="empty"> </div> -->
-	<a href="#"><div class="cubeblue"></div> </a>
+	<a href="#"><div class="cube cubeblue"></div> </a>
 </article><!--/selection-->
+</nav><!--/menuContainer-->
 <div class="clearfloat"></div><!--/clearfloat-->
 
 
@@ -98,7 +103,7 @@
 			<ul class="features">
 				<li class="design" style="opacity: 1;">
 						<span class="icn">
-						<i class="gen-enclosed foundicon-tools" style="font-size:5em"></i>
+						<i class="icon-wrench" style="font-size:4.5em"></i>
 						
 					</span>
 						<h4>Web Development</h4>
@@ -107,7 +112,7 @@
 					</li>
 				<li class="development" style="opacity: 1;">
 					<span class="icn">
-						<i class="gen-enclosed foundicon-tools" style="font-size:5em"></i>
+						<i class="icon-key" style="font-size:4.5em"></i>
 						
 					</span>
 					<h4>Front-End Skills</h4>
@@ -118,7 +123,7 @@
 				</li>
 				<li class="branding" style="opacity: 1;">
 				<span class="icn">
-						<i class="gen-enclosed foundicon-tools" style="font-size:5em"></i>
+						<i class="icon-star" style="font-size:4.5em"></i>
 						
 					</span>
 				<h4>Back-End Skills</h4>
@@ -129,19 +134,21 @@
 			</ul><!--/features-->
 		</section><!--/blurbRight-->
 	</div><!--/aboutContain-->
-</section><!--/about-->
-
+	<div class="clearfloat"></div>
+	<aside class="container">
+	<i class="icon-double-angle-down down"></i>
+</aside>
 
 <section class="resume">
 	<div class="resumeContainer">
 		<section class="collapsable collapsed" id="experience" >
 			<header>
-				<div class="wrapper">
-					<h2>View My Resume&nbsp;&nbsp;</h2><i class="general foundicon-plus close-btn" style="font-size:1em; color:black;"></i>
+				<div class="wrapper resume-btn">
+					<h2>View My Resume</h2><i class="icon-file-alt close-btn"></i>
 				</div>
 			</header>
 
-			<div class="wrapper">
+			<div class="wrapper resumePage">
 					<h2 class="resumeHeader">Education</h2>
 				<article>
 
@@ -204,16 +211,13 @@
 						<p>Assisting MuchMusic producers with transcribing, digitizing and cataloging videos. Helping the producers of MuchMusic Dance Week by liaising with dance crews, and making sure the live production ran smoothly. Organizing the wranglers and talent to ensure that all participants, including judges, were on schedule.</p>
 				  </div><!--/column-2-->
 			  </article> 
-			</div><!--/wrapper-->
-
-
-
-
-		
+			</div><!--/wrapper-->	
 		</section><!--/collapsable-->
-
 	</div><!--/sectionContainer-->
 </section><!--/section-->
+</section><!--/about-->
+
+
 
 <div class="clearfloat"></div>
 <section id="webWork">
@@ -222,7 +226,7 @@
 		<section class="icons">
 			<div class="webIcon">
 				<a class="various" rel="gallery" data-fancybox-type="iframe" onmouseover="change('contactbutton','images/contact_over.gif');" 
- onmouseout="change('contactbutton','images/contact_box.gif');" href="http://fancyapps.com/fancybox/" ><img  src="images/timmins3.png" name="timmins" alt=""/></a>
+ onmouseout="change('contactbutton','images/contact_box.gif');" href="http://fancyapps.com/fancybox/" ><img f src="images/timmins3.png" name="timmins" alt=""/></a>
 			</div>  
 			<div class="webIcon">
 				<a class="various" rel="gallery" data-fancybox-type="iframe" href="http://fancyapps.com/fancybox/" ><img src="images/barterful2.png" name="barterful" alt=""/></a>
@@ -240,25 +244,8 @@
 		</section><!--/icons-->
 	</div><!--/webContainer-->
 </section><!--/webWork-->
+<div class="clearfloat"></div>
 
-<script type="text/javascript">
-$(document).ready(function() {
-	$(".various").fancybox({
-        type: 'iframe',
-        autoSize : true,
-        scrolling:'auto',
-        autoCenter:true,
-        fitToView:false,
-        autoDimensions:true,
-         beforeShow: function(){
-  // added 50px to avoid scrollbars inside fancybox
-   this.width = '100%';
-   this.height = '80%';
-  }
-    });
-});
-</script>
-<script src="js/plugin.js"></script>
 <footer><div class="social"> <i class="gen-enclosed foundicon-tools"></i>  <ul><li><i class="foundicon-facebook"></i><i class="foundicon-twitter"></i></li><li><i class="social foundicon-github"></i> </ul></div></footer>
 </body>
 </html> 

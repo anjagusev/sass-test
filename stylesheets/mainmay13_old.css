@@ -3,17 +3,17 @@ Syntax error: File to import not found or unreadable: compass/reset.
               Load paths:
                 /Applications/MAMP/htdocs/sass-test
                 /Applications/MAMP/htdocs/sass-test/sass
-        on line 1 of sass/main.scss
+        on line 1 of sass/mainmay13.scss
 
 1: @import "compass/reset";
-2: @import url(http://fonts.googleapis.com/css?family=Lato:400,300);
+2: @import url(http://fonts.googleapis.com/css?family=Lato:100,400,300);
 3: @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800);
 4: @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
-5: @import "cross_browser_opacity.scss";
-6: 
+5: @import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+6: @import "../sass/cross_browser_opacity.scss";
 
 Backtrace:
-sass/main.scss:1
+sass/mainmay13.scss:1
 /Library/Ruby/Gems/1.8/gems/sass-3.2.8/bin/../lib/sass/../sass/tree/import_node.rb:67:in `import'
 /Library/Ruby/Gems/1.8/gems/sass-3.2.8/bin/../lib/sass/../sass/tree/import_node.rb:28:in `imported_file'
 /Library/Ruby/Gems/1.8/gems/sass-3.2.8/bin/../lib/sass/../sass/tree/import_node.rb:37:in `css_import?'
@@ -66,4 +66,4 @@ sass/main.scss:1
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: File to import not found or unreadable: compass/reset.\A               Load paths:\A                 /Applications/MAMP/htdocs/sass-test\A                 /Applications/MAMP/htdocs/sass-test/sass\A         on line 1 of sass/main.scss\A \A 1: @import \"compass/reset\";\A 2: @import url(http://fonts.googleapis.com/css?family=Lato:400,300);\A 3: @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800);\A 4: @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);\A 5: @import \"cross_browser_opacity.scss\";\A 6: "; }
+  content: "Syntax error: File to import not found or unreadable: compass/reset.\A               Load paths:\A                 /Applications/MAMP/htdocs/sass-test\A                 /Applications/MAMP/htdocs/sass-test/sass\A         on line 1 of sass/mainmay13.scss\A \A 1: @import \"compass/reset\";\A 2: @import url(http://fonts.googleapis.com/css?family=Lato:100,400,300);\A 3: @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800);\A 4: @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);\A 5: @import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);\A 6: @import \"../sass/cross_browser_opacity.scss\";"; }

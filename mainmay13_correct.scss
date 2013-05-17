@@ -1,16 +1,12 @@
-@import "compass/reset";
+
 @import url(http://fonts.googleapis.com/css?family=Lato:100,400,300);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800);
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
 @import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
 @import "../sass/cross_browser_opacity.scss";
-@import "../sass/general_enclosed_foundicons.scss";
-@import "../sass/general_foundicons.scss";
-@import "../sass/social_foundicons.scss";
-@import "../sass/fonts.scss";
-@import "../sass/fonts.scss";
-@import "compass/css3";
-
+@import '../sass/reset.scss';
+@import "compass/reset";
+//older
 
 $small_width: 620px;
 $back_colour: #FFE0D7;
@@ -155,15 +151,7 @@ a{
   }
 }
 
-.foundicon-up-arrow:before {
-font-family: "GeneralFoundIcons";
-font-weight: normal;
-font-style: normal;
-text-decoration: none;
-border:none;
-.foundicon-up-arrow:{}
-.general{}
-}
+
 
 /* ==========================================================================
    First Page
@@ -258,13 +246,34 @@ letter-spacing:-1px;
 
 }
 
+#menuContaier {
+  z-index:10;
+  position:relative;
+
+}
+
+
+.menu {
+  
+     position: fixed;
+    text-align: center;
+    top: 0%;
+    display:block;
+    width: 50px;
+
+    //opacity:1;
+    //z-index:100;
+    i {
+
+    }
+}
 /* ==========================================================================
    Navigation
    ========================================================================== */
 
 
 #selection {
-
+display:block;
 	border:$border;
   height:100%;
 	margin-top:.2em;
@@ -675,7 +684,7 @@ margin:$centered;
     top: 1.063em;
     transition: background 0.2s linear 0s;
     width: 4.875em;
-    z-index: 1;
+   // z-index: 1;
     padding: 0;
     vertical-align:middle;
 }
@@ -728,7 +737,7 @@ ul.features{ position: relative; }
       transition: background 0.2s linear 0s;
       top: 1.063em;
       width: 4.875em;
-      z-index: 1;
+     // z-index: 1;
     }
     
       ul.features li span.icn > span { vertical-align: middle; }
@@ -799,16 +808,16 @@ width:90%;
   position:relative;
   display:block;
   height:relative;
-  height:20.625em;
+  height:18.625em;
  } 
 
 
  a:hover:after {
-  content: url("../images/hover3.png");
+  content: url("../images/hover.png");
     height: 16.625em;
     left: 0;
     position: absolute;
-    width: 22.750em;
+    width: 18.750em;
     opacity:10;
 }
 img{
@@ -996,7 +1005,7 @@ h2{
 }
 
 .collapsable h2:hover{
-  @include transparent; color:black;
+  //@include transparent; color:black;
   background:resume(.9);
   background:white;
 } 

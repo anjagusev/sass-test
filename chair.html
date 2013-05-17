@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CHAIR</title>
+	<link rel="stylesheet" href="stylesheets/chair.css">
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('#menu').click(function(e){ 
+	if( $('nav').css('display') == 'none')
+	{
+			$('nav').css('display', 'block');
+			return;
+
+	}
+
+	if( $('nav').css('display') == 'block')
+	{
+			$('nav').css('display', 'none');
+			return;
+	}
+		});
+}
+});
+</script>
+</head>
+<body>
+<a href="#menu" id="menu" name="menu">Menu</a>
+	<nav>
+		<ul>
+			<li> <a href="#">Home</a></li>
+			<li> <a href="#">Contact</a></li>	
+			<li> <a href="#">View</a></li>
+		</ul>
+	</nav>
+	<header>
+	<h1>Chair</h1>
+	<h2>The most important thing you own</h2>
+</header>
+<hr>
+	<div class="container">
+	<div class="post">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eleifend odio nec tortor viverra a aliquet velit pellentesque. Donec quis lacus lectus. Proin eget lacus a sem feugiat fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam et nisi a dui laoreet pulvinar</div><div class="side">Archive</div>
+</div>
+</body>
+</html>
