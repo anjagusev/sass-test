@@ -804,34 +804,128 @@ $grey: #313131;;
     padding-bottom:.2em;
     border-bottom:1px solid $grey;
   }
-  img {
-    border:3px dotted $grey;
+  
+  #barterful {
+    background: url('../images/barterful2.png');
+  }
+/*
+  #barterful:hover {
+    content:url("../images/hover3.png");
+    
+  }
+*//*
+  .caption {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: url('../images/opacity.png');
+   // background-color: #0B1915;
+    color: #000000;
+    height: 2em;
+    opacity: 0;
+    padding: 5%;
+    position: absolute;
+    transition: opacity 1s ease-in;
+    width: 2em;
+
+}
+
+.caption:hover {
+    opacity: 1;
+    transition: all 1s ease;
+     -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}*/
+
+#lapapa{
+  background:url('../images/lapapa2.png');
+}
+
+#portfolio1 {
+  background:url('../images/portfolioMockup.png');
+}
+#portfolio2 {
+  background: url('../images/portfolio2.png');
+}
+
+.thumb {
+   width:15.625em;
+    height:15.625em;
+}
+ .caption {
+  background: url("../images/wood_pattern.png") repeat fixed 100% 0 transparent;
+;
+    color: black;
+    height: 1em;
+    margin-top:14em;
+  margin-left:5em;
+    opacity: 1;
+    position: absolute;
+     left:10;
+    transition: opacity 3s ease-in;
+    width: 4em;
+    padding:1em;
+  }
+  img, figure, .thumb {
+    //border:3px dotted $grey;
     float:left;
     margin:1em;
-     -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: -webkit-border-radius 0.5s ease-in;
+  -moz-transition: -moz-border-radius 0.5s ease-in;
+  -o-transition: border-radius 0.5s ease-in;
+  -ms-transition: border-radius 0.5s ease-in;
+  transition: border-radius 0.5s ease-in;
   }
+
+  img:hover, figure:hover{
+
+  /*-webkit-transform: rotate(1080deg);
+  -moz-transform: rotate(1080deg);
+  -o-transform: rotate(1080deg);
+  -ms-transform: rotate(1080deg);
+  transform: rotate(1080deg);*/
+opacity:1;
+  -webkit-border-radius: 0%;
+  -moz-border-radius: 0%;
+  border-radius: 0%;
+
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+    //height: 16.625em;
+    
+}
+
+
  
+/*
   a:hover:after {
 
     content: url("../images/hover.png");
     left: 0;
     position: absolute;
     opacity:10;
-  }
+  }*/
   h2{
     font-size:2em;
   }
   @media screen and (max-width: 580px){
-   img {
+   img, figure, .thumb {
     margin:0 auto;
     text-align:center;
     border:1px solid pink;
    }
   }
    @media screen and (max-width: 520px){
-   img {
+   img, figure, .thumb {
     margin:0;
     width:90%;
     padding:0;
