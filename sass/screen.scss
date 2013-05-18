@@ -44,6 +44,12 @@ $dots: url("../images/worn_dots.png") repeat fixed 100% 0 transparent;
 $eschD: url("../images/ESCHERESQUE_STE.png") repeat fixed 100% 0 transparent;
 $Noto: 'Noto Sans', sans-serif;
 $opacity: url("../images/opacity.png") repeat fixed 100% 0 transparent;
+@import url(http://fonts.googleapis.com/css?family=Neuton:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Allerta);
+@import url(http://fonts.googleapis.com/css?family=Arvo);
+$allerta:'Allerta', sans-serif;
+$arvo: 'Arvo', serif;
+$neuton: 'Neuton', serif;
 
 /*header{
 
@@ -852,27 +858,36 @@ $grey: #313131;;
 }
 
 .thumb {
+
    width:15.625em;
     height:15.625em;
 }
  .caption {
-  background: url("../images/wood_pattern.png") repeat fixed 100% 0 transparent;
-;
-    color: black;
-    height: 1em;
-    margin-top:14em;
-  margin-left:5em;
+  border:1px solid black;
+  font-size:140%;
+  background: url("../images/wood.png") no-repeat;
+    color: #663300;
+    font-family:$arvo;
+    //engraved look
+    text-shadow: 0px 1px 0px rgba(255,255,255,.5); /* 50% white from bottom */
+    height: .9em;
+    margin-top:9.4em;
+   // margin-top:-1.2em;
+  margin-left:1em;
     opacity: 1;
     position: absolute;
-     left:10;
     transition: opacity 3s ease-in;
-    width: 4em;
+    width: 9em;
     padding:1em;
+    font-weight:400;
+    letter-spacing:.02em;
+    
   }
   img, figure, .thumb {
+    margin-top:5em;
     //border:3px dotted $grey;
     float:left;
-    margin:1em;
+    margin:2em 1em 1em 1em;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -920,16 +935,17 @@ opacity:1;
   @media screen and (max-width: 580px){
    img, figure, .thumb {
     margin:0 auto;
+   margin-bottom:1em;
     text-align:center;
-    border:1px solid pink;
+    border:5px solid pink;
    }
   }
    @media screen and (max-width: 520px){
-   img, figure, .thumb {
-    margin:0;
+   img  {
+    //margin:0;
     width:90%;
-    padding:0;
-    padding-bottom:.5em;
+    //padding:0;
+    //padding-bottom:.5em;
     text-align:center;
     border:1px solid green;
    }
