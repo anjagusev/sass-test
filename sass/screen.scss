@@ -50,6 +50,7 @@ $opacity: url("../images/opacity.png") repeat fixed 100% 0 transparent;
 $allerta:'Allerta', sans-serif;
 $arvo: 'Arvo', serif;
 $neuton: 'Neuton', serif;
+$scales: url("../images/black_scales_@2X.png") repeat fixed 100% 0 transparent;
 
 /*header{
 
@@ -86,7 +87,7 @@ body {
 {
   float:none;
   clear:both;
-  borner:none;
+  border:none;
 }
 
 
@@ -280,7 +281,7 @@ border:1px solid black;
   height:100%;
   width:100%;
 	//margin-top:.2em;
-  @media screen and (max-width: $small_width),only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+  @media screen and (max-width: $small_width), screen and (-webkit-min-device-pixel-ratio : 1.5), screen and (min-device-pixel-ratio : 1.5) {
     font-size: 20px;
     width:100%; 
   }
@@ -303,7 +304,7 @@ border:1px solid black;
     @media screen and (max-width: 1054px) {
       width:20%;
     } 
-    @media screen and (max-width: $small_width),only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+    @media screen and (max-width: $small_width), screen and (-webkit-min-device-pixel-ratio : 1.5), screen and (min-device-pixel-ratio : 1.5) {
       font-size: 20px;
       width:100%; 
     }   	
@@ -327,7 +328,7 @@ border:1px solid black;
     @media screen and (max-width: 1054px) {
       width:10%;
     } 
-    @media only screen and (max-width: $small_width), only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+    @media only screen and (max-width: $small_width), screen and (-webkit-min-device-pixel-ratio : 1.5), screen and (min-device-pixel-ratio : 1.5) {
       display:none;
     }
  	}
@@ -481,7 +482,7 @@ svg{
 #testT{
   float:none;
   clear:both;
-  top:10;
+  top:.9em;
   margin-top:2em;
   height: 100%; 
   width:100%;
@@ -703,12 +704,14 @@ svg{
   li:after{
         background-color: #E8E8E8;
         content: '';
-        position: absolute;
+        //position: absolute;
         left: 2.375em;
         top: 1.063em;
         height: 100%;
         width: 1px;
         line-height: 4.750em;
+        background-color: transparent; 
+        padding-bottom:2.938em; 
       } 
 }
 //end features ul
@@ -724,7 +727,7 @@ ul.features li {
 }
 
 ul.features li:after{
-  background-color: #E8E8E8;
+  background-color: black;
   content: '';
   position: absolute;
   left: 2.375em;
@@ -732,6 +735,7 @@ ul.features li:after{
   height: 100%;
   width: 1px;
   line-height: 4.750em;
+  z-index:0;
 } 
 
  ul.features li:last-child:after { 
@@ -739,7 +743,7 @@ ul.features li:after{
   padding-bottom:2.938em; 
 }
 
-ul.features li span.icn {
+ul.features li span.icn {z-index: 10;
       background-color: #89949B;
       border-radius: 100% 100% 100% 100%;
       display: block;
@@ -768,7 +772,7 @@ ul.features li span.icn > span.spritesheet.icnbranding{
 }
       
 ul.features li span.icn:hover{ 
-  background-color: #A1AEB7;
+  background: #A1AEB7;
  }
 
 .container {
@@ -795,20 +799,22 @@ $grey: #313131;;
 #webContainer{
   background: $opacity;
     width:100%;
+    height:45em;
+      border:3px solid pink;
 }
 
 #webDisplay{
-  font-family:$lato;
-  font-weight:300;
-  padding-top:3em;
-  margin:0 auto;
-  width:85%;
-  text-align:center;
-  color:$grey;
-  h2{
-    text-align:left;
-    padding-bottom:.2em;
-    border-bottom:1px solid $grey;
+    font-family:$lato;
+    font-weight:300;
+    padding-top:3em;
+    margin:0 auto;
+    width:85%;
+    text-align:center;
+    color:$grey;
+     h2{
+      text-align:left;
+      padding-bottom:.2em;
+      border-bottom:1px solid $grey;
   }
   
   #barterful {
@@ -862,8 +868,14 @@ $grey: #313131;;
    width:15.625em;
     height:15.625em;
 }
+
+.mockup {
+  p{
+  font-size:88%;
+  }
+}
  .caption {
-  border:1px solid black;
+  //border:1px solid black;
   font-size:140%;
   background: url("../images/wood.png") no-repeat;
     color: #663300;
@@ -873,16 +885,23 @@ $grey: #313131;;
     height: .9em;
     margin-top:9.4em;
    // margin-top:-1.2em;
-  margin-left:1em;
+  margin-left:.9em;
     opacity: 1;
     position: absolute;
     transition: opacity 3s ease-in;
-    width: 9em;
+    width: 8.5em;
     padding:1em;
     font-weight:400;
     letter-spacing:.02em;
-    
+    p{
+      font-size:.8em;
+      padding:0px;
+      margin:0px;
+      margin-top:-.5em;
+      margin-left:-2em;
+    }
   }
+
   img, figure, .thumb {
     margin-top:5em;
     //border:3px dotted $grey;
@@ -951,6 +970,32 @@ opacity:1;
    }
   }
 }
+
+
+#bottle{
+  border:1px solid black;
+  position:relative;
+  margin:1em;
+  width:15em;
+  height:15em;
+  background: url('../images/badge2.png');
+/*}
+    background:url('../images/barterful.png');*/
+ 
+    //width:200;
+    //height:200;
+  }
+
+  #bottle img {
+    width:10.4em;
+    height:10.4em;
+    //height:auto;
+    top:2.2em;
+    left:2.2em;
+    border-radius:50%;
+   // border:2px solid green;
+      position:absolute;    
+  }
 /*
 #webWork {
   min-width:40em;
@@ -1402,10 +1447,18 @@ max-height:3em;
    Contact Container
    ========================================================================== */
 #contact{
-   background:$opacity;
+   background:$scales;
   width:100%;
   min-height:10em;
 
+}
+#contact-form {
+  text-shadow:0 1px 0 #FFF;
+  border-radius:4px;
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  background:#F9F9F9;
+  padding:25px;
 }
 
 #contactContainer{
@@ -1416,6 +1469,9 @@ max-height:3em;
   margin:0 auto;
   width:85%;
   text-align:center;
+  max-width:500px;
+  border:1px solid black;
+  position:relative;
 }
 
 

@@ -1,4 +1,6 @@
 $( document ).ready(function() {
+
+	
 //*****************************
 //Click to show menu
 var top = $('html').offset().top;

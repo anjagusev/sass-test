@@ -6,7 +6,7 @@ $(document).ready(function(){
            // var Paper = Raphael(document.getElementById("triangle"), 400, 400);
           //var r = Raphael(10, 50, 320, 200); 
           //(250 wide X 500 HIGH)
-          var r = Raphael(document.getElementById("canvas1"),250,300);
+          //var r = Raphael(document.getElementById("canvas1"),250,300);
  var path = r.path("M 150 0 L 0 250 L 300 250 z");
 
 var w = 300;
