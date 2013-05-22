@@ -462,20 +462,16 @@ body {
 /* line 315, ../sass/screen.scss */
 svg {
   margin: 0 auto;
-  width: 90%;
-  height: 90%;
-  margin-left: 5%;
+  width: 60%;
+  height: 60%;
+  margin-left: 20%;
   padding-bottom: 0;
-}
-@media screen and (max-width: 904px) {
-  /* line 315, ../sass/screen.scss */
-  svg {
-    padding: 0;
-    margin: 0;
-  }
+    /* @media screen and (max-width: 904px) {
+
+     } */
 }
 
-/* line 327, ../sass/screen.scss */
+/* line 326, ../sass/screen.scss */
 #testT {
   float: none;
   clear: both;
@@ -484,23 +480,26 @@ svg {
   height: 100%;
   width: 100%;
   margin: 0 auto;
-  /* @media screen and (max-width: $small_width) {
-      width:100%;
-      height:60%;
-      padding:0;
-      margin:0;
-   }*/
 }
 @media screen and (max-width: 904px) {
-  /* line 327, ../sass/screen.scss */
+  /* line 326, ../sass/screen.scss */
   #testT {
-    width: 30em;
-    height: 15em;
-    padding: 0;
-    margin: 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 620px) {
+  /* line 326, ../sass/screen.scss */
+  #testT {
+    width: 100%;
   }
 }
 
+/* @media screen and (max-width: $small_width) {
+    width:100%;
+    height:60%;
+    padding:0;
+    margin:0;
+ }*/
 /* ==========================================================================
    Content Section
    ========================================================================== */

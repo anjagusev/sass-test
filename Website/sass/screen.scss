@@ -314,14 +314,13 @@ border:1px solid black;
 
 svg{
    margin:$centered;   
-    width:90%;
-    height:90%;
-    margin-left:5%;
+    width:60%;
+    height:60%;
+    margin-left:20%;
     padding-bottom:0;
-    @media screen and (max-width: 904px) {
-padding:0;
-margin:0;
-     }
+    /* @media screen and (max-width: 904px) {
+
+     } */
   }
 
 #testT{
@@ -334,11 +333,12 @@ margin:0;
   // height:825px;
   margin:$centered;
  @media screen and (max-width: 904px) {
-   width:30em;
-   height:15em;
-   padding:0;
-   margin:0;
+   width:100%;
  }    
+ @media screen and (max-width: $small_width) {
+    width:100%
+ }
+}
 /* @media screen and (max-width: $small_width) {
     width:100%;
     height:60%;
@@ -346,7 +346,7 @@ margin:0;
     margin:0;
  }*/
 // @media screen and (max-width:780)
-}
+
 
 
 /* ==========================================================================
