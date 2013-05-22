@@ -22,6 +22,7 @@ $min_width: 20em;
 $cube: url("../images/cubes.png") repeat fixed 60% 0 transparent;
 $nav_color: #607890;
 $sans: 'Open Sans', sans-serif;
+$elite: 'Special Elite', cursive;
 $oswald: 'Oswald', sans-serif;
 $purple: #C5C4F8;
 $salmon: #FABFBA;
@@ -31,8 +32,37 @@ $green: #81FFAF;;
 $cream: #FFF6F1;
 $pink: #FAC0FF;
 $circle: 13.714em;
+$shattered: url("../images/shattered.png") repeat fixed 60% 0 transparent;
+$lined: url("../images/linedpaper.png") repeat fixed 60% 0 transparent;
+$ag: url("../images/polonez_car.png") repeat fixed 60% 0 transparent;
+$pw: url("../images/pw_pattern.png") repeat fixed 60% 0 transparent;
 $esch: url("../images/ESCHERESQUE.png") repeat fixed 100% 0 transparent;
+$carbon:url("../images/subtle_carbon.png") repeat fixed 100% 0 transparent;
+$squares:url("../images/gradient_squares.png") repeat fixed 100% 0 transparent;
+$luxury:url("../images/fake_luxury.png") repeat fixed 100% 0 transparent;
+$triangle: url("../images/gplaypattern.png") repeat fixed 100% 0 transparent;
+$diamond: url("../images/diamond_upholstery.png") repeat fixed 100% 0 transparent;
+$dots: url("../images/worn_dots.png") repeat fixed 100% 0 transparent;
 $eschD: url("../images/ESCHERESQUE_STE.png") repeat fixed 100% 0 transparent;
+$Noto: 'Noto Sans', sans-serif;
+$opacity: url("../images/opacity.png") repeat fixed 100% 0 transparent;
+@import url(http://fonts.googleapis.com/css?family=Neuton:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Allerta);
+@import url(http://fonts.googleapis.com/css?family=Arvo);
+$allerta:'Allerta', sans-serif;
+$arvo: 'Arvo', serif;
+$neuton: 'Neuton', serif;
+$scales: url("../images/black_scales_@2X.png") repeat fixed 100% 0 transparent;
+
+/*header{
+
+    background-color: black;
+    height: 2em;
+    margin-top:-.1em;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}*/
 
 body {
  
@@ -45,12 +75,87 @@ body {
   background: $cube;
 }
 
+/* #container{ 
+  max-width:$page_width;
+  margin:$centered;
+  margin-top:.5em;
+  min-height:50em;
+ @media screen and (max-width: $small_width), only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+    max-width:100%;
+    margin:$centered;
+  } */
+
 .clearfloat
 {
   float:none;
   clear:both;
   border:none;
 }
+
+
+/* ==========================================================================
+   Top Right Navigation
+   ========================================================================== */
+
+	/*nav {
+	max-width: 20em;
+	border: $border;
+	float:right;
+	display:block;
+ @media screen and (max-width: $small_width), only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+
+     float:none;
+     margin-bottom:1em;
+    }
+		a {
+		text-decoration:none;
+		color: $nav_color;
+		padding: 0 1em;
+		font-size:2em;
+		font-weight: 300;
+		}
+
+	
+}
+}*/
+
+
+/* ==========================================================================
+   Always Visible Arrow
+   ========================================================================== */
+/*
+.trigger{
+   color:black;
+    left: 95%;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    width: 50px;
+    z-index: 100;
+    text-decoration: none;
+    border:none;
+    i {
+      border:none;
+
+    }
+}
+
+a{
+  border:none;
+}
+
+.scroll a, .hideclick a {
+  color:black;
+  border:1px solid black;
+  a, i{
+    text-decoration: none;
+     border:3px solid black;
+
+  }
+}*/
+
+
 /* ==========================================================================
    First Page
    ========================================================================== */
@@ -124,6 +229,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
 
 	h1::first-letter {
   	font-weight:300;
+  	/*font-size:1.6em;*/
   	margin-left:-.8em;
     @media screen and (max-width: 854px + 14px) {
       width:auto;
@@ -146,6 +252,10 @@ only screen and (min-device-pixel-ratio : 1.5) {
 
 #menuContainer i:hover {
   color:red;
+  /*font-size:4em;
+  .menu {
+    font-size:4em;
+  }*/
 }
 
 .menu {
@@ -159,6 +269,8 @@ only screen and (min-device-pixel-ratio : 1.5) {
     font-size:3em;
     line-height:1em;
    color:$purple;
+    //opacity:1;
+    //z-index:100;
     i {
 font-size:3em;
 border:1px solid black;
@@ -178,6 +290,7 @@ border:1px solid black;
 	border:$border;
   height:100%;
   width:100%;
+	//margin-top:.2em;
   @media screen and (max-width: $small_width), screen and (-webkit-min-device-pixel-ratio : 1.5), screen and (min-device-pixel-ratio : 1.5) {
     font-size: 20px;
     width:100%; 
@@ -191,7 +304,8 @@ border:1px solid black;
 	}
   .cube {
    	position: relative;
-    min-height:2.5em;
+   //	min-height:3em;
+   min-height:2.5em;
    	padding-top:1em;
     text-align: center;
     width: 15.64%; /*13.3em*/
@@ -302,6 +416,55 @@ border:1px solid black;
   @include page_tab($colourr); 
   } 
 }
+
+
+
+ /*#canvas1{
+   border:1px solid black;
+   float:none;
+
+width:30%;
+height:30%;
+   clear:both;
+  padding:0;
+  margin:0;
+  svg {
+    border:1px solid pink;
+    margin:0;
+
+     
+  }
+  }
+/*
+canvas {
+    cursor:pointer;
+    display: block;
+    float: left;
+    margin: 0;
+    position: relative;
+    color: #2E2C2A;
+
+}
+
+ .triangle{
+   border:1px solid black;
+   float:none;
+
+width:30%;
+height:30%;
+   clear:both;
+  padding:0;
+  margin:0;
+  svg {
+    border:1px solid pink;
+    margin:0;
+
+     
+  }
+  }
+
+  */
+
 /* ==========================================================================
    SVG Graphic
    ========================================================================== */
@@ -543,7 +706,9 @@ background:$palepink;
     line-height: 1.438em;
   }
   li:after{
+        //background-color: #E8E8E8;
         content: '';
+        //position: absolute;
         left: 2.375em;
         top: 1.063em;
         height: 100%;
@@ -553,6 +718,8 @@ background:$palepink;
         padding-bottom:2.938em; 
       } 
 }
+//end features ul
+
 ul.features{ 
   position: relative; 
 }
@@ -583,6 +750,7 @@ ul.features li:after{
 ul.features li span.icn {z-index: 8;
   color:$cream;
   background-color:$palepink;
+      //background-color: darken(#A1AEB7, 20%);
       border-radius: 100% 100% 100% 100%;
       display: block;
       float: left;
@@ -599,6 +767,7 @@ ul.features li span.icn {z-index: 8;
       transition: background 0.2s linear 0s;
       top: 1.003em;
       width: 5.475em;
+     // z-index: 1;
 }
     
 ul.features li span.icn > span { 
@@ -635,9 +804,12 @@ ul.features li span.icn:hover{
 $grey: #313131;
 
 #webContainer{
-  width:100%;
-  height:45em;
-     @media screen and (max-width: 520px){
+ //background: url("../images/wood_pattern.png") repeat fixed 60% 0 transparent;
+
+  //background: $opacity;
+    width:100%;
+    height:45em;
+       @media screen and (max-width: 520px){
 
    
    }
@@ -692,20 +864,39 @@ $grey: #313131;
   p{
   font-size:88%;
   }
+
+
 }
 
  .caption {
-    position:absolute;
-    height:15.625em;
+  position:absolute;
+  height:15.625em;
     transition: opacity 1s ease-in-out 0s;
     width: 15.625em;
     opacity:0;
     font-weight:500;
     font-family:$lato;
-    background: $cream;
-    border:1px solid #CCC;
+  //border:1px solid black;
+ // font-size:140%;
+  background: $cream;
+  border:1px solid #CCC;
+  // url("../images/wood.png") no-repeat;
     color: $grey;
+    //engraved look
+   // text-shadow: 0px 1px 0px rgba(255,255,255,.5); /* 50% white from bottom */
+    /*height: .9em;
+    margin-top:9.4em;
+   // margin-top:-1.2em;
+  margin-left:.9em;
+    opacity: 1;
+    position: absolute;
+    transition: opacity 3s ease-in;
+    width: 8.5em;
+    padding:1em;
+    font-weight:400;
+    letter-spacing:.02em;*/
     p{
+      
       padding:0px;
       margin-top:1em;
     }
@@ -715,36 +906,92 @@ $grey: #313131;
     opacity:1;
     transition: opacity 1s ease-in-out 0s;
   }
-img, figure, .thumb {
+
+/*
+  .work-content {
+    background-color: #0B1915;
+    color: #000000;
+    height: 90%;
+    opacity: 0;
+    padding: 5%;
+    position: absolute;
+    transition: opacity 1s ease-in-out 0s;
+    width: 90%;
+}
+.work-content ul {
+    text-align: center;
+}
+.work-content li {
+    color: #A1A1A1;
+    display: inline;
+    padding: 2% 3%;
+}
+.work-item:hover .work-content {
+    opacity: 1;
+    transition: opacity 1s ease-in-out 0s;
+}*/
+
+
+
+  img, figure, .thumb {
     margin-top:5em;
+    //border:3px dotted $grey;
     float:left;
     margin:1em 1em 1em 1em;
+   /* -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: -webkit-border-radius 0.5s ease-in;
+  -moz-transition: -moz-border-radius 0.5s ease-in;
+  -o-transition: border-radius 0.5s ease-in;
+  -ms-transition: border-radius 0.5s ease-in;
+  transition: border-radius 0.5s ease-in;*/
+
   }
 
   img:hover, figure:hover{
-    opacity:1;
-    -webkit-border-radius: 0%;
-    -moz-border-radius: 0%;
-    border-radius: 0%;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;   
-  }
+  /*-webkit-transform: rotate(1080deg);
+  -moz-transform: rotate(1080deg);
+  -o-transform: rotate(1080deg);
+  -ms-transform: rotate(1080deg);
+  transform: rotate(1080deg);*/
+opacity:1;
+  -webkit-border-radius: 0%;
+  -moz-border-radius: 0%;
+  border-radius: 0%;
 
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+    //height: 16.625em;
+    
+}
+
+
+ 
+/*
+  a:hover:after {
+
+    content: url("../images/hover.png");
+    left: 0;
+    position: absolute;
+    opacity:10;
+  }*/
   h2{
     font-size:2em;
   }
-  @media screen and (max-width: 850px){
+     @media screen and (max-width: 850px){
       border:4px dotted red; 
       padding:0;
       width:90%;
-     img{ width:auto;
-      margin:0 auto;
-      border:2px solid black;
-     }
-  }
+ img{ width:auto;
+  margin:0 auto;
+  border:2px solid black;
+ }
+ }
+
   @media screen and (max-width: 660px){
     margin:0;
     width:100%;
@@ -1194,6 +1441,84 @@ h2{
 
   }
 }
+
+/*
+  .wrapper{
+    margin: 0 auto;
+    padding: 0 10px;
+    width:100%;
+    //width: 58.75em;
+    //max-height:1em;
+    font-family:$Noto;
+    font-weight:300;
+    line-height:1.4em;
+    letter-spacing:.04em;
+      .resumeHeader{
+        font-size:2em;
+        padding-top:1em;
+        position:static;
+      }
+    min-height:30em;
+    float:none;
+     @media screen and (max-width: 600px){
+  max-height:140em;
+border:3px solid purple;
+}
+    }
+
+}
+
+
+.resume-btn{
+  padding:0;
+}
+
+
+.collapsable { 
+overflow: hidden; 
+height:80em;
+  header { 
+    background:$eschD;
+    color:white;
+    font-weight:100;
+    float:none;
+    text-align: center;
+    margin:$centered;
+    padding-top:1em;
+    font-size:2em;
+    cursor: pointer; 
+    min-height:2em; 
+    vertical-align: baseline;
+    h2{
+      display:inline-block;
+      position:relative;
+      padding-top:0em;
+      font-family:$lato;
+      text-align:center;
+      margin:0 auto;
+      font-size:2em;
+        padding-top:1em;
+    } 
+    i{
+      margin-left:.5em;
+      color:white;
+      font-size:1.5em;
+    }
+  }
+  header:hover { 
+    background:$esch; 
+    color:black; 
+    i {
+      color:black;
+    }
+  }
+  h2:hover{
+    background:resume(.9);
+  } 
+  .close-btn:hover{
+    background: url(../img/close-active.png) no-repeat; 
+  }
+}*/
 
 .collapsable collapsed {
 max-height:3em;
