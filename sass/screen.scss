@@ -9,6 +9,7 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
 @import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
 @import "../sass/cross_browser_opacity.scss";
+@import url(http://fonts.googleapis.com/css?family=Special+Elite);
 
 $small_width: 620px;
 $back_colour: #FFE0D7;
@@ -21,6 +22,7 @@ $min_width: 20em;
 $cube: url("../images/cubes.png") repeat fixed 60% 0 transparent;
 $nav_color: #607890;
 $sans: 'Open Sans', sans-serif;
+$elite: 'Special Elite', cursive;
 $oswald: 'Oswald', sans-serif;
 $purple: #C5C4F8;
 $salmon: #FABFBA;
@@ -122,7 +124,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
 /* ==========================================================================
    Always Visible Arrow
    ========================================================================== */
-
+/*
 .trigger{
    color:black;
     left: 95%;
@@ -151,7 +153,7 @@ a{
      border:3px solid black;
 
   }
-}
+}*/
 
 
 /* ==========================================================================
@@ -161,6 +163,7 @@ a{
 
 #home
 {
+  top:0;
 margin:$centered;
 margin-top:.5em;
 max-width:$page_width;
@@ -185,6 +188,7 @@ margin-left:-2em;
 	margin-left:2em;
 	float:left;
 	margin-top:.5em;
+  top:0;
 	/*font-family:$lato;*/
 	font-size:3em;
 	font-weight:300;
@@ -240,29 +244,31 @@ only screen and (min-device-pixel-ratio : 1.5) {
   }
 }
 
-#menuContaier {
+#menuContainer {
+  top:0;
   z-index:10;
   position:relative;
 }
 
 #menuContainer i:hover {
-  color:$pink;
-  font-size:4em;
+  color:red;
+  /*font-size:4em;
   .menu {
     font-size:4em;
-  }
+  }*/
 }
 
 .menu {
      position: fixed;
     top: 0%;
-    right:0%;
+    right:3%;
     display:block;
     z-index:20;
     padding:.2em;
+    padding-top:0;
     font-size:3em;
     line-height:1em;
-   color:$green;
+   color:$purple;
     //opacity:1;
     //z-index:100;
     i {
@@ -276,6 +282,10 @@ border:1px solid black;
 
 
 #selection {
+  cursor:pointer;
+  position:relative;
+  top:0%;
+  margin-top:-.5em;
   display:block;
 	border:$border;
   height:100%;
@@ -294,8 +304,9 @@ border:1px solid black;
 	}
   .cube {
    	position: relative;
-   	min-height:3em;
-   	padding-top:2em;
+   //	min-height:3em;
+   min-height:2.5em;
+   	padding-top:1em;
     text-align: center;
     width: 15.64%; /*13.3em*/
     background: $green;
@@ -336,6 +347,7 @@ border:1px solid black;
  	.cubecream {
    	@extend .cube;
    	background:$cream;
+    width:18.7%;
     @media screen and (max-width: 1054px) {
       width:10%;
     }    
@@ -404,18 +416,7 @@ border:1px solid black;
   @include page_tab($colourr); 
   } 
 }
-canvas {
-    cursor:pointer;
-    display: block;
-    float: left;
-    margin: 0;
-    position: relative;
-    color: black;
-    svg {
-      background-color:black;
-    }
 
-}
 
 
  /*#canvas1{
@@ -470,8 +471,8 @@ height:30%;
 
 svg{
    margin:$centered;   
-    width:50%;
-    height:50%;
+    width:60%;
+    height:60%;
     margin-left:20%;
     padding-bottom:0;
     /* @media screen and (max-width: 904px) {
@@ -528,10 +529,11 @@ svg{
    ========================================================================== */
 
 #about {
-  background: $eschD;
+ //background: url("../images/cubeblack.png") repeat fixed 60% 0 transparent;
+;
   margin:$centered;
   min-height: 30em; 
-  padding-top:4.938em;
+  padding-top:3.938em;
 /*  @media screen and (max-width: 850px){
  min-height:100em;
   }
@@ -582,18 +584,21 @@ svg{
 
 .blurbAbout{
   padding-right:3.750em;
-  color:white;
-  font-weight:100;
+  color:black;
+  font-weight:300;
   p{
      line-height: 1.438em;
      margin-bottom:1.375em;
   }
   h3{
+background:$palepink;
     font-size: 2em;
-    padding:0;
     margin:0;
     line-height: 2em;
     margin-bottom: .7em;
+    padding:.5em;
+    padding-top:0;
+    padding-bottom:0;
     text-transform: uppercase;
   }
   @media screen and (max-width: 860px){
@@ -645,7 +650,7 @@ svg{
 }
 
 .features {
-  color:white;
+  color:black;
   font-family:$sans;
   line-height:.750em;
   vertical-align: baseline;
@@ -659,7 +664,6 @@ svg{
     position:relative;
   }
   li:after {
-    background-color: pink;
     content: "";
     height: 100%;
     left: 2.375em;
@@ -692,7 +696,7 @@ svg{
     vertical-align: baseline;
     list-style-position: outside;
     border-image-width:1 1 1 1;
-    color:#88939A;
+    color: darken(#88939A, 60%);
     font-weight:400;
   }
   p{ 
@@ -702,7 +706,7 @@ svg{
     line-height: 1.438em;
   }
   li:after{
-        background-color: #E8E8E8;
+        //background-color: #E8E8E8;
         content: '';
         //position: absolute;
         left: 2.375em;
@@ -725,15 +729,15 @@ ul.features li {
   padding-left: 7.500em;
   position: relative;
 }
-
+//line between the circles
 ul.features li:after{
-  background-color: black;
+  background-color: $palepink;
   content: '';
   position: absolute;
   left: 2.375em;
   top: 1.063em;
   height: 100%;
-  width: 1px;
+  width: 3px;
   line-height: 4.750em;
   z-index:0;
 } 
@@ -744,11 +748,13 @@ ul.features li:after{
 }
 
 ul.features li span.icn {z-index: 8;
-      background-color: #89949B;
+  color:$cream;
+  background-color:$palepink;
+      //background-color: darken(#A1AEB7, 20%);
       border-radius: 100% 100% 100% 100%;
       display: block;
       float: left;
-      height: 4.875em;
+      height: 5.175em;
       left: 0;
       line-height:  4.750em;
       margin-right: 2.50em;
@@ -759,8 +765,8 @@ ul.features li span.icn {z-index: 8;
       -o-transition: background 0.2s linear 0s;
       -ms-transition: background 0.2s linear 0s;
       transition: background 0.2s linear 0s;
-      top: 1.063em;
-      width: 4.875em;
+      top: 1.003em;
+      width: 5.475em;
      // z-index: 1;
 }
     
@@ -772,7 +778,7 @@ ul.features li span.icn > span.spritesheet.icnbranding{
 }
       
 ul.features li span.icn:hover{ 
-  background: #A1AEB7;
+  background: $purple;
  }
 
 .container {
@@ -784,7 +790,7 @@ ul.features li span.icn:hover{
 
 .down
 {
-  color:white;
+  color:black;
   font-size:3em;
   padding-top:5em;
   width:3%;
@@ -800,10 +806,13 @@ $grey: #313131;
 #webContainer{
  //background: url("../images/wood_pattern.png") repeat fixed 60% 0 transparent;
 
-  background: $opacity;
+  //background: $opacity;
     width:100%;
     height:45em;
-      
+       @media screen and (max-width: 520px){
+
+   
+   }
 }
 
 #webDisplay{
@@ -811,11 +820,21 @@ $grey: #313131;
     font-weight:300;
     padding-top:3em;
     margin:0 auto;
-    width:85%;
+    width:70%;
     text-align:center;
     color:$grey;
+     @media screen and (max-width: 820px){
+      height:80em;
+      display:block;
+      border:1px solid red;
+     }
+    a{
+      font-family:$lato;
+    }
      h2{
       text-align:left;
+      background:$green;
+      padding:.5em;
       padding-bottom:.2em;
       border-bottom:1px solid $grey;
   }
@@ -823,37 +842,6 @@ $grey: #313131;
   #barterful {
     background: url('../images/barterful2.png');
   }
-/*
-  #barterful:hover {
-    content:url("../images/hover3.png");
-    
-  }
-*//*
-  .caption {
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    background: url('../images/opacity.png');
-   // background-color: #0B1915;
-    color: #000000;
-    height: 2em;
-    opacity: 0;
-    padding: 5%;
-    position: absolute;
-    transition: opacity 1s ease-in;
-    width: 2em;
-
-}
-
-.caption:hover {
-    opacity: 1;
-    transition: all 1s ease;
-     -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
-}*/
 
 #lapapa{
   background:url('../images/lapapa2.png');
@@ -876,17 +864,27 @@ $grey: #313131;
   p{
   font-size:88%;
   }
+
+
 }
 
  .caption {
+  position:absolute;
+  height:15.625em;
+    transition: opacity 1s ease-in-out 0s;
+    width: 15.625em;
+    opacity:0;
+    font-weight:500;
+    font-family:$lato;
   //border:1px solid black;
-  font-size:140%;
-  background: url("../images/wood.png") no-repeat;
-    color: #663300;
-    font-family:$arvo;
+ // font-size:140%;
+  background: $cream;
+  border:1px solid #CCC;
+  // url("../images/wood.png") no-repeat;
+    color: $grey;
     //engraved look
-    text-shadow: 0px 1px 0px rgba(255,255,255,.5); /* 50% white from bottom */
-    height: .9em;
+   // text-shadow: 0px 1px 0px rgba(255,255,255,.5); /* 50% white from bottom */
+    /*height: .9em;
     margin-top:9.4em;
    // margin-top:-1.2em;
   margin-left:.9em;
@@ -896,21 +894,50 @@ $grey: #313131;
     width: 8.5em;
     padding:1em;
     font-weight:400;
-    letter-spacing:.02em;
+    letter-spacing:.02em;*/
     p{
-      font-size:.8em;
+      
       padding:0px;
-      margin:0px;
-      margin-top:-.5em;
-      margin-left:-2em;
+      margin-top:1em;
     }
   }
+
+  .thumb:hover, figure:hover, .caption:hover {
+    opacity:1;
+    transition: opacity 1s ease-in-out 0s;
+  }
+
+/*
+  .work-content {
+    background-color: #0B1915;
+    color: #000000;
+    height: 90%;
+    opacity: 0;
+    padding: 5%;
+    position: absolute;
+    transition: opacity 1s ease-in-out 0s;
+    width: 90%;
+}
+.work-content ul {
+    text-align: center;
+}
+.work-content li {
+    color: #A1A1A1;
+    display: inline;
+    padding: 2% 3%;
+}
+.work-item:hover .work-content {
+    opacity: 1;
+    transition: opacity 1s ease-in-out 0s;
+}*/
+
+
 
   img, figure, .thumb {
     margin-top:5em;
     //border:3px dotted $grey;
     float:left;
-    margin:2em 1em 1em 1em;
+    margin:1em 1em 1em 1em;
    /* -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -919,10 +946,10 @@ $grey: #313131;
   -o-transition: border-radius 0.5s ease-in;
   -ms-transition: border-radius 0.5s ease-in;
   transition: border-radius 0.5s ease-in;*/
+
   }
 
   img:hover, figure:hover{
-
   /*-webkit-transform: rotate(1080deg);
   -moz-transform: rotate(1080deg);
   -o-transform: rotate(1080deg);
@@ -955,14 +982,34 @@ opacity:1;
   h2{
     font-size:2em;
   }
+     @media screen and (max-width: 850px){
+      border:4px dotted red; 
+      padding:0;
+      width:90%;
+ img{ width:auto;
+  margin:0 auto;
+  border:2px solid black;
+ }
+ }
+
+  @media screen and (max-width: 660px){
+    margin:0;
+    width:100%;
+    border:2px solid purple;
+  }
   @media screen and (max-width: 580px){
+    width:auto;
    img, figure, .thumb {
-    margin:0 auto;
+    margin:0;
    margin-bottom:1em;
-    text-align:center;
-    border:5px solid pink;
+    border:5px solid orange;
+   }
+
+   img {
+    width:30%;
    }
   }
+
    @media screen and (max-width: 520px){
    img  {
     //margin:0;
@@ -1147,6 +1194,54 @@ a:hover:after {
 
 }
 */
+
+
+/* ==========================================================================
+   Video Work Container
+   ========================================================================== */
+#videoContainer{
+    width:100%;
+    height:105em;
+     display:block;
+     position:relative;
+     @media screen and (max-width: 600px){
+    height:auto;
+  }
+      
+}
+
+#videoContainer iframe {
+  @media screen and (max-width: 600px){
+    
+    margin-top:1em;
+    width:auto;
+    height:auto;
+  }
+}
+
+#videoDisplay{
+    font-family:$lato;
+    font-weight:300;
+    padding-top:3em;
+    margin:0 auto;
+    width:70%;
+    text-align:center;
+    color:$grey;
+    a{
+      font-family:$lato;
+    }
+     h2{
+      font-size:2em;
+      text-align:left;
+      background:$purple;
+      padding:.5em;
+      padding-bottom:.2em;
+      border-bottom:1px solid $grey;
+      margin-bottom:1em;
+      }
+    }
+
+
 /* ==========================================================================
    Resume
    ========================================================================== */
@@ -1155,12 +1250,11 @@ a:hover:after {
   margin-top:2em;
  // margin-left:auto;
   //margin-right:auto;
-  background:$eschD;
   width:100%;
   position:static;
   min-height:10em;
   display:inline-block;
-  font-family:$Noto;
+  font-family:$lato;
   line-height: 1.625em;
   font-weight:400;
   color:black;//#8B91A0;
@@ -1176,7 +1270,7 @@ a:hover:after {
 }
 
 #resumeSection{
-  background:$eschD;
+  //background:$eschD;
   padding-bottom:2em;
 }
 
@@ -1216,7 +1310,7 @@ margin:0;
 
 
 #experience article { margin: 2.500em 3.750em; 
-
+/*
 *::-moz-selection {
     background: none repeat scroll 0 0 #00FFF1;
     color: #444652;
@@ -1227,10 +1321,11 @@ margin:0;
     color: #444652;
     text-shadow: none;
 }
-
+*/
 }
 
 .resume-btn {
+  width:25%;
   font-family:$lato;
   vertical-align: baseline;
   width:20em;
@@ -1253,11 +1348,11 @@ margin:0;
     font-family:$lato;
     height:3em;
     vertical-align: baseline;
-    color:white;
+    color:black;
     padding-top:.3em;
     h2{
        font-family:$lato;
-       font-weight:100;
+       font-weight:300;
       padding:0;
       margin:0;
     }
@@ -1446,35 +1541,131 @@ max-height:3em;
 }
 
 
-
 /* ==========================================================================
    Contact Container
    ========================================================================== */
 #contact{
-   background:$scales;
   width:100%;
   min-height:10em;
 
 }
 #contact-form {
-  text-shadow:0 1px 0 #FFF;
-  border-radius:4px;
+  text-align:left;
+  color:black;
+  //text-shadow:0 1px 0 #FFF;
+  border-radius:.25em;
   -webkit-border-radius:4px;
   -moz-border-radius:4px;
-  background:#F9F9F9;
-  padding:25px;
+ // background:#F9F9F9;
+  padding:2em;
+}
+
+#contact-form h3 {
+  color:black;
+  display:block;
+  font-size:28px;
+  background:$pink;
+  padding:.5em;
+
+}
+
+#contact-form h4 {
+  margin:5px 0 15px;
+  display:block;
+  font-size:13px;
+}
+#contact-form label span {
+  cursor:pointer;
+  color:black;
+  display:block;
+  margin:5px 0;
+  font-weight:500;
+}
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+  width:100%;
+  box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  -webkit-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  -moz-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  border:1px solid #CCC;
+  background:#FFF;
+  margin:0 0 5px;
+  padding:10px;
+  border-radius:5px;
+}
+#contact-form input[type="text"]:hover,
+#contact-form input[type="email"]:hover,
+#contact-form textarea:hover {
+  -webkit-transition:border-color 0.3s ease-in-out;
+  -moz-transition:border-color 0.3s ease-in-out;
+  transition:border-color 0.3s ease-in-out;
+  border:1px solid #AAA;
+}
+#contact-form textarea {
+  height:100px;
+  max-width:100%;
+}
+
+#contact-form button[type="submit"] {
+  cursor:pointer;
+  width:100%;
+  border:none;
+  background:$cream;
+  /*  box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  -webkit-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  -moz-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;*/
+  border:1px solid #CCC;
+  color:black;
+  /*background-image:linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+  background-image:-moz-linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+  background-image:-webkit-linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+  */
+  margin:0 0 5px;
+  padding:10px;
+  border-radius:5px;
+}
+#contact-form button[type="submit"]:hover {
+  background-color:$cream;
+  color:black;
+   box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  -webkit-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  -moz-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+  border:1px solid #CCC;
+  /*background-image:linear-gradient(bottom, black 0%, white 52%);
+  background-image:-moz-linear-gradient(bottom, #9C215A 0%, #A82767 52%);
+  background-image:-webkit-linear-gradient(bottom, #9C215A 0%, #A82767 52%);
+  */-webkit-transition:background 0.3s ease-in-out;
+  -moz-transition:background 0.3s ease-in-out;
+  transition:background-color 0.3s ease-in-out;
+}
+#contact-form button[type="submit"]:active {
+  box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
+}
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline:0;
+  border:1px solid #999;
+}
+::-webkit-input-placeholder {
+    color:#888;
+}
+:-moz-placeholder {
+    color:#888;
+}
+::-moz-placeholder {
+    color:#888;
+}
+:-ms-input-placeholder {
+    color:#888;
 }
 
 #contactContainer{
 
   font-family:$lato;
   font-weight:300;
-  padding-top:3em;
   margin:0 auto;
-  width:85%;
-  text-align:center;
-  max-width:500px;
-  border:1px solid black;
+  width:80%;
   position:relative;
 }
 
@@ -1483,41 +1674,71 @@ max-height:3em;
 /* ==========================================================================
    Footer
    ========================================================================== */
-
+a {
+    text-decoration:none;
+    border:none;
+  }
 
 footer{
-  color:black;
-  background:$cream;
-  border:none;
+  background: $cream;
+  border-top:1px solid #CCC; 
+  color:white;
+  padding-top:.3em;
   width:100%;
   min-height:5em;
   text-decoration:none;
   font-family:$sans;
   font-size:.8em;
   text-align:center;
+  span {
+    width:100%;
+    line-height:1.4em;
+    font-size:1.2em;
+    font-family:$lato;
+    font-weight:300;
+    color:black;
+    margin-left:30%;
+    margin-top:4em;
+    text-align:center;
+ @media screen and (max-width: 600px){
+  width:100%;
+  display:block;
+  margin:0;
+ }
+    }
+
+
 }
 #footerContainer {
+
   padding:1em;
-  border:1px dotted blue;
+  //border:1px dotted blue;
 }
 
-.footerLeft {
-  border:1px solid red;
+.footerRight{
+    a {
+    color: black;
+  }
+  //border:1px solid red;
   min-height:3%;
-  width:40%;
-  text-align:left;
-  float:left;
+  //width:20%;
+  float:right;
   ul li {
     font-size:3em;
     display:inline;
   }
-}
-.footerRight{
-  border:1px sold pink;
-  width:40%;
+ // border:1px sold pink;
+  width:25%;
+  padding:0em 1em;
   min-height:3%;
+  text-align:right;
+   @media screen and (max-width: 600px){
+  width:80%;
+  display:block;
+  padding:0;
+  margin:0;
   float:left;
-  text-align:left;
+ }
 }
 #footer #ul {
  

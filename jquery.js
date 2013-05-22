@@ -1,6 +1,23 @@
-$( document ).ready(function() {
+$(document ).ready(function() {
+//*********
+//Validating the contact Form
+$('#email').blur(function(){
 
-	
+var regexEmail = /^([a-zA-Z0-9]+([\.+_-][a-zA-Z0-9]+)*)@(([a-zA-Z0-9]+((\.|[-]{1,2})[a-zA-Z0-9]+)*)\.[a-zA-Z]{2,6})$/;
+var inputEmail=$(this).val();
+var resultEmail = regexEmail.test(inputEmail);
+
+//checks the email regular expression
+if(!resultEmail){
+	$(this).next('.error').css('display', 'inline');
+}
+else {
+	$(this).next('.error').css('display', 'none');
+}
+
+});
+
+//form jquery	
 //*****************************
 //Click to show menu
 var top = $('html').offset().top;
@@ -23,29 +40,38 @@ $('#resume').toggle();
 
 });
 
-
+//menu appear and disappear function
 $('.menu').click(function(e){ 
+	if($(this).hasClass('icon-remove')){
+				$(this).removeClass('icon-remove');
+				$(this).addClass('icon-plus');
+			}
+	else if ($(this).hasClass('icon-plus')){
+				$(this).removeClass('icon-plus');
+				$(this).addClass('icon-remove');
+			}
+
 	if( $('#selection').css('display') == 'none')
 	{
 			$('#selection').css(
-				{
+				{	'top': top,
+					'height': '4em',
 					'display': 'block',
 					'position': 'fixed',
 					'width': '100%',
-					'margin': '0 auto',
-					'border': '1px solid red',
-					'height': '4.5em'
+					'margin': '0 auto'
+					//'height': '4.5em'
 										
 				});
-
+			
+			
 				$('.resume-btn').css({
-					'pointer-events': 'none'
 				}); //display', 'block');
 
 			$('.cube').css(
 				{
 					'position': 'relative',
-					'padding': '0.02em',
+					'padding': '0.00em',
 					'padding-top': '1em',
 
 					
@@ -63,12 +89,15 @@ $('.menu').click(function(e){
 			return;
 	}
 
-
 	if( $('#selection').css('display') == 'block')
 	{
 			$('#selection').css('display', 'none');
+			$('.icon-plus menu').replaceWith('<i class="icon-plus menu"></i>');
+
 			return;
 	}
+
+
 
 		});
 
@@ -130,6 +159,7 @@ $(".cubeblue").click(function() {
 
 });
 
+//fade the menu button
 var fadeStart=100 // 100px scroll or less will equiv to 1 opacity
 	,fadeUntil=700 // 200px scroll or more will equiv to 0 opacity
 	,fading = $('.fading');
@@ -171,7 +201,7 @@ $(".scroll").click(function(event){
 //	
 //});
 
-
+/*
 $(window).bind('scroll', function(){
 	if($(this).scrollTop()<100){
 		//$(".menu").hide();
@@ -181,7 +211,7 @@ $(window).bind('scroll', function(){
 	else if($(this).scrollTop() < 600) {
 		  $(".menu").show();
     }
-});
+});*/
 
 
 $(window).bind('scroll', function(){
@@ -195,7 +225,7 @@ $(window).bind('scroll', function(){
 });
 
 $(document).ready(function(){        
-    $(".trigger").hide();
+  /*  $(".trigger").hide();
     $(".menu").hide();
 
 	// When p.hide is clicked, run the hideDiv function, use this to target itself		
@@ -205,7 +235,7 @@ $(document).ready(function(){
 	});
 	
 	// fade in containing div
-	$("#fading").fadeIn('slow');
+	$("#fading").fadeIn('slow');*/
 
 var wWidth = $(window).width() || window.innerWidth; 
 	
@@ -223,21 +253,6 @@ var wWidth = $(window).width() || window.innerWidth;
 	
 });
 
-var PXC = {
-
-	elements: {},
-	animations: {},
-	params: {
-		isReady: false,
-		isBusy: false
-	},
-	
-	init: function(){
-		
-		$('body').addClass('ready'); // util para activar animaciones CSS3
-		
-		}
-	};	
 // When called, hides all divs using the class name .showhide
 $.fn.hideDiv = function(e)
 {

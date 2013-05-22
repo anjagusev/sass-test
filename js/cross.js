@@ -1,6 +1,4 @@
   $(document).ready(function(){
-   window.onload = function () {
- 
              //var Paper = Raphael(document.getElementById("triangle"), 400, 400);
           //var r = Raphael(document.getElementById("testT"));
  //var path = Paper.path("M 0 287 l 159 -287 l 159 287 z");
@@ -17,12 +15,13 @@ var svg = document.querySelector("svg");
 svg.removeAttribute("width");
 svg.removeAttribute("height");
 
-
-   var x = r.path("M 0 0 L460 225 L920 0 z");
-    
-  var y = r.path("M 920 450 L460 225 L920 0 z");
+    //top triangle
+    var x = r.path("M 0 0 L460 225 L920 0 z");
+    //right triangle
+    var y = r.path("M 920 450 L460 225 L920 0 z");
+    //left triangle
     var z = r.path("M 0 0 L460 225 L 0 450 z");
-    
+    //bottom triangle
     var l = r.path("M 0 450 L460 225 L 920 450 z");
    
 
@@ -35,21 +34,21 @@ svg.removeAttribute("height");
     
     var l = r.path("M 0 350 L200 187 L 420 350 z");*/
   
-   //x.attr({fill:'url("images/triangletop_hover.png")', stroke:'none'});
-     y.attr({fill:'url("images/triangleright_hover.png")', stroke:'none'});
-   l.attr({fill:'url("images/trianglebottom_hover.png")', stroke:'none'});
-     z.attr({fill:'url("images/triangleleft_hover.png")', stroke:'none'});
+   x.attr({fill:'url("images/triangletop_hover2.png")', stroke:'none'});
+     y.attr({fill:'url("images/triangle_righthover2.png")', stroke:'none'});
+   l.attr({fill:'url("images/trianglebottom_hover4.png")', stroke:'none'});
+     z.attr({fill:'url("images/triangleleft_hover3.png")', stroke:'none'});
 
 
-//x.mouseout(function(){this.attr({fill:'url("images/triangletop_hover.png")'})});
-y.mouseout(function(){this.attr({fill: 'url("images/triangleright_hover.png")'})});
-z.mouseout(function(){this.attr({fill: 'url("images/triangleleft_hover.png")'})});
-l.mouseout(function(){this.attr({fill: 'url("images/trianglebottom_hover.png")'})});
+x.mouseout(function(){this.attr({fill:'url("images/triangletop_hover2.png")'})});
+y.mouseout(function(){this.attr({fill: 'url("images/triangle_righthover2.png")'})});
+z.mouseout(function(){this.attr({fill: 'url("images/triangleleft_hover3.png")'})});
+l.mouseout(function(){this.attr({fill: 'url("images/trianglebottom_hover4.png")'})});
 
 
-//x.mouseover(function(){this.attr({fill:'url("images/triangletop.png")'})});
+x.mouseover(function(){this.attr({fill:'url("images/triangletop.png")'})});
 y.mouseover(function(){this.attr({fill: 'url("images/triangleright.png")'})});
 z.mouseover(function(){this.attr({fill: 'url("images/triangleleft.png")'})});
 l.mouseover(function(){this.attr({fill: 'url("images/trianglebottom.png")'})});
 
-}});
+});

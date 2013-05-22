@@ -10,7 +10,6 @@
 <!--<script src="js/prefixfree.min.js"></script>-->
 <!-- Add mousewheel plugin (this is optional) -->
 <script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
-<script src="js/plugin.js"></script>
 <!-- Add fancyBox -->
 <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen">
 <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
@@ -28,13 +27,26 @@
 </head>
 
 <body>
-	<!--<div class="trigger" style="display: block; border:0px;">
-<a class="scroll hideclick" style="border:0px;" href="#top">
-<i class="icon-arrow" style="color:white; border:0px;"></i>
-</a>
-</div>-->
-	<!--<header>PERMAMENT HEADER</header> <div id="container">-->
+	<nav id="menuContainer"> 
+		<i class="icon-remove menu"></i>
+		<!-- <i class="general foundicon-plus menu" style="font-size:1em; color:black;"></i> -->
+		<article id="selection">
+			<div class="cube cubecream"></div>
+			<!--<div class="empty"> </div> -->
+			 <a href="#about"><div class="cube cubepalepink"> about me </div></a>
+			<!--<div class="empty"> </div> -->
+			<a href="#"><div class="cube"> web portfolio </div> </a>
+			<!--<div class="empty"> </div> -->
+			<a href="#"><div class="cube cubepurple"> video portfolio</div> </a>
+			<!--<div class="empty"> </div> -->
+			<a href="#contact"><div class="cube cubepink"> contact </div></a>
+			<!--<div class="empty"> </div> -->
+			<a href="#"><div class="cube cubecream"></div> </a>
+		</article><!--/selection-->
+	</nav><!--/menuContainer-->
+
 <section id="home" data-type="background" class="pages" data-speed="10">
+
 		<!--<nav> <a href="#contact"> contact </a> <a href="#work"> work </a> </nav>  /nav-->
 
 		<ul class="ch-grid">
@@ -56,35 +68,9 @@
 		<div id="testT"></div>	
 		<div class="clearfloat"></div><!--/clearfloat-->
 
-	<nav id="menuContainer"> 
-		<i class="icon-plus menu">here</i>
-		<!-- <i class="general foundicon-plus menu" style="font-size:1em; color:black;"></i> -->
-		<article id="selection">
-			<div class="cube cubecream"></div>
-			<!--<div class="empty"> </div> -->
-			 <a href="#about"><div class="cube cubepalepink"> who am i? </div></a>
-			<!--<div class="empty"> </div> -->
-			<a href="#"><div class="cube"> web development </div> </a>
-			<!--<div class="empty"> </div> -->
-			<a href="#"><div class="cube cubepurple"> videography</div> </a>
-			<!--<div class="empty"> </div> -->
-			<a href="#resumee"><div class="cube cubepink"> resume </div></a>
-			<!--<div class="empty"> </div> -->
-			<a href="#"><div class="cube cubeblue"></div> </a>
-		</article><!--/selection-->
-	</nav><!--/menuContainer-->
-
-	<div class="clearfloat"></div><!--/clearfloat-->
+	
 
 
-
-	<!--<div id="about" class="pages" data-type="background" data-speed="10">-->
-	<div id="content">
-		<div class="maincontainer">
-			<!--<h1>moooo</h1> 
-			<div> Holla for a dolla huynny bo bomoo?</div>-->
-		</div>
-	</div>
 </section> <!--/section home-->
 
 <div class="clearfloat"></div><!--/clearfloat=-->
@@ -231,34 +217,42 @@
 		<a href="#" ><figure id="portfolio2" class="thumb"><div class="caption"><p>Javascript Project</p></div></figure></a>
 	</div><!--/#webdisplaycontainer-->
 </section><!--/webContainer-->
-
+<div class="clearfloat"></div>
+<section id="videoContainer">
+	<div id="videoDisplay">
+		<h2>Video & Animation Projects</h2>
+		<iframe src="http://player.vimeo.com/video/66689391?title=0&amp;byline=0&amp;portrait=0" width="700" height="481" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+		<iframe src="http://player.vimeo.com/video/66689392?title=0&amp;byline=0&amp;portrait=0" width="700" height="481" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+		<iframe src="http://player.vimeo.com/video/66689390?title=0&amp;byline=0&amp;portrait=0" width="700" height="481" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+	</div><!--videoDisplay-->
+</section><!--videoContainer-->
 
 <div class="clearfloat"></div>
 <section id="contact">
 	<div id="contactContainer">
-		<form id="contact-form" action="/" method="post">
-        <h3>Send Me a Message</h3>
+		<form id="contact-form" name="contact-form" action="" method="post">
+        <h3>Contact Me</h3>
         <h4>Fill in the following contact form and I'll get back to you as soon as possible.</h4>
         <div>
                 <label>
-                        <span>Name: (required)</span>
-                        <input placeholder="Please enter your name" type="text" tabindex="1" required autofocus>
+                        <span>Name:</span>
+                        <input placeholder="Please enter your name" type="text" id="name" name="name" tabindex="1" required>
                 </label>
         </div>
         <div>
                 <label>
-                        <span>Email: (required)</span>
-                        <input placeholder="Please enter your email address" type="email" tabindex="2" required>
+                        <span>Email:</span>
+                        <input id="email" name="email" placeholder="Please enter your email address" type="email" tabindex="2" required>
                 </label>
         </div>
         <div>
                 <label>
-                        <span>Message: (required)</span>
-                        <textarea placeholder="Include your message here" tabindex="5" required></textarea>
+                        <span>Message:</span>
+                        <textarea id="message" name="message" placeholder="Include your message here" tabindex="3" required></textarea>
                 </label>
         </div>
         <div>
-                <button name="submit" type="submit" id="contact-submit">Send Email</button>
+                <button name="contact-submit" type="submit" id="contact-submit">Send Email</button>
         </div>
 </form>
 	</div><!--/cONTACT container-->
@@ -266,28 +260,54 @@
 
 <footer> 
 <span>&copy; 2013 Anja Gusev</span>
-	<div id="footerContainer"> 
-		
-		<div class="footerLeft">
+<div class="footerRight">
 			<ul>
-				<li>
+				<!--<li>
 					<i class="icon-facebook"></i>
+				</li>-->
+				<li><a href="http://www.twitter.com/anjagusev" alt="twitter" target="_blank">
+					<i class="icon-twitter"></i></a>
+				</li>
+				<li><a href="https://github.com/anjagusev" alt="github page" target="_blank">
+					<i class="icon-github"></i></a>
 				</li>
 				<li>
-					<i class="icon-twitter"></i>
-				</li>
-				<li>
-					<i class="icon-github"></i>
-				</li>
-				<li>
-					<i class="icon-linkedin"></i>
+					<a href="http://ca.linkedin.com/pub/anja-gusev/39/785/753" target="_blank" alt="linkedin page"
+					<i class="icon-linkedin"></i></a>
 				</li>
 				
 			</ul>
 		</div>
-		<div class="footerRight">
-		</div>
-	</div>
 </footer>
+
+<script>
+$(document).ready(function() {
+
+	$('#name').blur(function(){
+		var sender = $(this).val();
+		$.post('contact.php', {
+			formName: 'contact-form',
+			name: sender 
+		}, function(data){
+				var senderCount = data
+			}, 'html');
+		});
+
+	$('#contact-form').submit(function(e){
+		e.preventDefault();
+		var formData = $(this).serialize();
+		$.post('contact.php', formData, function(data){
+			var usernameCount = data;
+	    	if(1 == usernameCount){
+	    		alert('ya');
+	    	} else {
+				//$(this).remove();
+				$('#contact-form').replaceWith('<h4>Thank you</h4');
+			}
+		}, 'html');
+});
+
+});
+</script>
 </body>
 </html> 
